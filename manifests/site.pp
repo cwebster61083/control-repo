@@ -29,3 +29,7 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
+
+node 'agent.platform9.puppet.net' {
+    notify {'Hello Puppet!':}
+}
