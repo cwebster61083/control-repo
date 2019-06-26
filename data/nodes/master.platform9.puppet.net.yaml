@@ -1,0 +1,26 @@
+# Puppet Infrastructure Summary: Found a Monolithic Infrastructure
+
+# Found 8 CPU(s) / 15886 MB RAM for Primary Master master.platform9.puppet.net
+# Specify the following optimized settings in Hiera in nodes/master.platform9.puppet.net.yaml
+
+---
+puppet_enterprise::profile::database::shared_buffers: 3715MB
+puppet_enterprise::puppetdb::command_processing_threads: 2
+puppet_enterprise::profile::puppetdb::java_args:
+  Xms: 1114m
+  Xmx: 1114m
+puppet_enterprise::master::puppetserver::jruby_max_active_instances: 5
+puppet_enterprise::profile::master::java_args:
+  Xms: 3840m
+  Xmx: 3840m
+puppet_enterprise::master::puppetserver::reserved_code_cache: 640m
+puppet_enterprise::profile::console::java_args:
+  Xms: 768m
+  Xmx: 768m
+puppet_enterprise::profile::orchestrator::java_args:
+  Xms: 768m
+  Xmx: 768m
+
+# CPU Summary: Total/Used/Free: 8/7/1 for master.platform9.puppet.net
+# RAM Summary: Total/Used/Free: 15886/10845/5041 for master.platform9.puppet.net
+# JVM Summary: Using 768 MB per Puppet Server JRuby for master.platform9.puppet.net
