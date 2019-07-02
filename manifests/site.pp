@@ -32,5 +32,12 @@ node default {
 
 node 'agent.platform9.puppet.net' {
     notify {'Hello Puppet!':}
-    include motd
+    
+    file { '/etc/motd':
+  ensure  => 'present',
+  owner   => 'root',
+  group   => 'root',
+  content => 'Hello world! Puppet is awesome.',
+}
+
 }
