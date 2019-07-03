@@ -1,2 +1,6 @@
 ---
 message: "This node is using common data"
+
+repositories:
+  - remote: "ssh://git@github.com:cwebster61083/base.git"
+    private-key: "/etc/puppetlabs/puppetserver/ssh/base"
