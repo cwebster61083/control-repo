@@ -18,6 +18,6 @@ forge 'https://forge.puppet.com'
 
 mod 'puppetlabs-support_tasks', '1.0.5'
 
-mod 'base',
-  :git => 'git@github.com:cwebster61083/base.git',
-  :branch => 'development'
+# mod 'base',
+#   :git => 'git@github.com:cwebster61083/base.git',
+#   :branch => 'development'
