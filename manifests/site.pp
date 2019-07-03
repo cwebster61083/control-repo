@@ -32,6 +32,5 @@ node default {
 
 node 'agent.platform9.puppet.net' {
     notify {'Hello Puppet!':}
-    include base
-    include fortune
+    include base::cowsay
 }
