@@ -35,3 +35,7 @@ node 'agent.platform9.puppet.net' {
     include base::cowsay
     include base::fortune
 }
+
+node 'pe-201818-agent.puppetdebug.vlan' {
+    notify {'Are you working?':}
+}
