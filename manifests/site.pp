@@ -38,4 +38,13 @@ node 'agent.platform9.puppet.net' {
 
 node 'pe-201818-agent.puppetdebug.vlan' {
     notify {'Are you working?':}
+
+    file { '/tmp/test_file.txt':
+      ensure  => 'file',
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
+      content => '',
+    }
 }
+
