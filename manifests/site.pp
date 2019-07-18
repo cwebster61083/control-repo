@@ -30,12 +30,6 @@ node default {
   #   class { 'my_class': }
 }
 
-node 'agent.platform9.puppet.net' {
-    notify {'Hello Puppet!':}
-    include base::cowsay
-    include base::fortune
-}
-
 node 'pe-201818-agent.puppetdebug.vlan' {
     notify {'Are you working?':}
 
