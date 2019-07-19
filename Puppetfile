@@ -20,7 +20,7 @@ mod 'base',
   :git => 'git@github.com:cwebster61083/base.git',
   :branch => 'production'
 
-mod 'puppetlabs-hiera', :latest
+mod 'puppet-hiera', :latest
 mod 'puppetlabs-cd4pe', :latest
 # Requirements for cd4pe
 mod 'puppetlabs-concat', '4.2.1'
