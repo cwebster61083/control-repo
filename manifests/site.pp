@@ -33,5 +33,10 @@ node default {
 node 'pe-201910-agent.puppetdebug.vlan' {
     $somevar = lookup('profile::default::publicip')
     notify { $somevar: }
+
+    nginx::resource::server { 'kibana.myhost.com':
+      listen_port => 4444,
+      proxy       => 'http://localhost:5555',
+    }
 }
 
