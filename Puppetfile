@@ -20,6 +20,7 @@ mod 'base',
   :git => 'git@github.com:cwebster61083/base.git',
   :branch => 'production'
 
+mode 'puppet-nginx', :latest
 mod 'puppetlabs-cd4pe', :latest
 # Requirements for cd4pe
 mod 'puppetlabs-concat', '4.2.1'
