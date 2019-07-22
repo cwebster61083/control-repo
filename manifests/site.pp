@@ -34,8 +34,8 @@ node 'pe-201910-agent.puppetdebug.vlan' {
   $somevar = lookup('profile::default::publicip')
 
   file { 'test.txt':
-    path    => '/tmp/test.txt',
     ensure  => present,
+    path    => '/tmp/test.txt',
     content => $somevar,
   }
 }
