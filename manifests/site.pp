@@ -31,7 +31,12 @@ node default {
 }
 
 node 'pe-201910-agent.puppetdebug.vlan' {
-    $somevar = lookup('profile::default::publicip', Array[String])
-    notify { $somevar: }
+  $somevar = lookup('profile::default::publicip', Array[String])
+  
+  file { 'test.txt':
+    path    => '/tmp/test.txt',
+    ensure  => present,
+    content => $somevar,
+  }
 }
 
