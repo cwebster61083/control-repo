@@ -31,8 +31,7 @@ node default {
 }
 
 node 'pe-201910-agent.puppetdebug.vlan' {
-    nginx::resource::server { 'kibana.myhost.com':
-      location_allow => lookup('profile::default::publicip'),
-    }
+    $somevar = lookup('profile::default::publicip')
+    notify { $somevar: }
 }
 
