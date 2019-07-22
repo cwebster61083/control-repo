@@ -5,4 +5,4 @@ profile::default::publicip:
   - '172.20.162.128/25'
   - '10.0.0.0/8'
 
-profile::webserver::nginx::allow: "%{alias('profile::default::publicip')}"
+profile::webserver::nginx::allow: "%{lookup('profile::default::publicip')}"
