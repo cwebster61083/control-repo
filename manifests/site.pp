@@ -30,7 +30,7 @@ node default {
   #   class { 'my_class': }
 }
 
-node 'pe-201818-agent.puppetdebug.vlan' {
+node 'pe-201910-agent.puppetdebug.vlan' {
     notify {'Are you working?':}
 }
 
