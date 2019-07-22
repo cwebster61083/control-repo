@@ -36,7 +36,7 @@ node 'pe-201910-agent.puppetdebug.vlan' {
   file { 'test.txt':
     ensure  => present,
     path    => '/tmp/test.txt',
-    content => $somevar[0],
+    content => $somevar[0][1],
   }
 
   notify { $somevar: }
