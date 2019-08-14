@@ -8,4 +8,6 @@ class profile::base {
     content => 'Some Text',
   }
 
+  include writefile::testfile
+
 }
