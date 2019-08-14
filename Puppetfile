@@ -16,10 +16,6 @@ forge 'https://forge.puppet.com'
 #  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
 #  :branch => 'docs_experiment'
 
-mod 'base',
-  :git => 'git@github.com:cwebster61083/base.git',
-  :branch => 'production'
-
 mod 'puppet-nginx', :latest
 mod 'puppetlabs-cd4pe', :latest
 # Requirements for cd4pe
