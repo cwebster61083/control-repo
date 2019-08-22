@@ -6,3 +6,5 @@ profile::default::publicip:
   - '10.0.0.0/8'
 
 profile::webserver::nginx::allow: "%{alias('profile::default::publicip')}"
+
+noop_mode: true
