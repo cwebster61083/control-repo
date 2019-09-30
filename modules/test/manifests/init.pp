@@ -5,5 +5,5 @@
 # @example
 #   include test
 class test {
-  notify { 'this is the test class': }
+  notify { $message: }
 }
