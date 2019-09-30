@@ -5,5 +5,7 @@
 # @example
 #   include test
 class test {
-  notify { $message: }
+  notify { 'Notify Agent':
+    message => $message
+  }
 }
