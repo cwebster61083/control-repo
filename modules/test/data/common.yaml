@@ -1,2 +1,2 @@
 ---
-  test::message: 'This is my hiera message and my name is ${::fqdn}'
+  test::message: "This is my hiera message and my name is ${::fqdn}"
