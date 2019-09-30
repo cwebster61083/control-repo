@@ -1,2 +1,2 @@
 ---
-  test::message: 'this is my hiera message.'
+  message: 'this is my hiera message.'
