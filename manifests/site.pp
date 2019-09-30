@@ -36,4 +36,6 @@ node 'master.puppetdebug.vlan' {
 
 node 'agent.platform9.puppet.net' {
   notify { 'This is the agent': }
+
+  include test
 }
