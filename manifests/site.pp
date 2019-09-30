@@ -33,3 +33,7 @@ node default {
 node 'master.puppetdebug.vlan' {
   notify { 'This is the master': }
 }
+
+node 'agent.platform9.puppet.net' {
+  notify { 'This is the agent': }
+}
