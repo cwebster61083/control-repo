@@ -29,3 +29,7 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
+
+node 'master.puppetdebug.vlan' {
+  notify { 'This is the master': }
+}
