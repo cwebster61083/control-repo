@@ -8,3 +8,6 @@ profile::default::publicip:
 profile::webserver::nginx::allow: "%{alias('profile::default::publicip')}"
 
 noop_mode: true
+
+puppet_enterprise::master::puppetserver::jruby_puppet_max_queued_requests: 48 
+puppet_enterprise::master::puppetserver::jruby_puppet_max_retry_delay: 600
