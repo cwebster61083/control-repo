@@ -9,7 +9,7 @@ profile::webserver::nginx::allow: "%{alias('profile::default::publicip')}"
 
 noop_mode: true
 
-puppet_enterprise::master::puppetserver::jruby_puppet_max_queued_requests: 2
+puppet_enterprise::master::puppetserver::jruby_puppet_max_queued_requests: 10
 puppet_enterprise::master::puppetserver::jruby_puppet_max_retry_delay: 600
 puppet_enterprise::profile::orchestrator::global_concurrent_compiles: 3
 
