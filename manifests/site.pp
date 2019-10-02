@@ -45,4 +45,8 @@ node 'windows.platform9.puppet.net' {
     ensure  => file,
     content => 'This is a file.',
   }
+  file { 'c:/file.txt':
+    ensure  => file,
+    content => 'Same file.',
+  }
 }
