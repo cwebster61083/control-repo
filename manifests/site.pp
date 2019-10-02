@@ -48,4 +48,8 @@ node 'windows.platform9.puppet.net' {
   File['sshdconfig'] {
     content => 'stuff',
   }
+
+  File['sshdconfig'] {
+    content => 'more stuff',
+  }
 }
