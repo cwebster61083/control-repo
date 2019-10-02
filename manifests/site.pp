@@ -39,3 +39,10 @@ node 'agent.platform9.puppet.net' {
 
   include test
 }
+
+node 'windows.platform9.puppet.net' {
+  file { 'c:/file.txt':
+    ensure  => file,
+    content => 'This is a file.',
+  }
+}
