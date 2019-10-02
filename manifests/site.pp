@@ -42,11 +42,10 @@ node 'agent.platform9.puppet.net' {
 
 node 'windows.platform9.puppet.net' {
   file { 'c:/file.txt':
-    ensure  => file,
-    content => 'This is a file.',
+  alias => 'sshdconfig',
   }
-  file { 'c:/file.txt':
-    ensure  => file,
-    content => 'Same file.',
+
+  File['sshdconfig'] {
+    content => 'stuff',
   }
 }
