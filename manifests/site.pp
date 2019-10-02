@@ -45,5 +45,6 @@ node 'windows.platform9.puppet.net' {
     ensure  => directory,
     source  => 'C:\\stuff\\test',
     recurse => true,
+    force   => true,
   }
 }
