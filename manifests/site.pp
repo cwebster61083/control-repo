@@ -42,14 +42,6 @@ node 'agent.platform9.puppet.net' {
 
 node 'windows.platform9.puppet.net' {
   file { 'c:/file.txt':
-  alias => 'sshdconfig',
-  }
-
-  File['sshdconfig'] {
-    content => 'stuff',
-  }
-
-  File['sshdconfig'] {
-    content => 'more stuff',
+    ensure => file,
   }
 }
