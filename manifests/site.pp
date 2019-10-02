@@ -42,9 +42,10 @@ node 'agent.platform9.puppet.net' {
 
 node 'windows.platform9.puppet.net' {
   file { 'C:/test':
-    ensure  => directory,
-    source  => 'C:\\stuff\\test',
-    recurse => true,
-    force   => true,
+    ensure             => directory,
+    source             => 'C:\\stuff\\test',
+    recurse            => true,
+    force              => true,
+    source_permissions => ignore,
   }
 }
