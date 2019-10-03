@@ -57,9 +57,10 @@ node 'windows.platform9.puppet.net' {
     "${paths_root}55E3652ACEB38283D8765E8E9B8E6B57", # VS2015 x86
     "${paths_root}058244C1FE8B65D4DBA1A29CABB77F15", #Product
   ]
+  $a = *$paths_prerequisites
 
   notify { 'regpaths':
     loglevel => info,
-    message  => "The reg paths are: *${paths_prerequisites}",
+    message  => "The reg paths are: ${a}",
   }
 }
