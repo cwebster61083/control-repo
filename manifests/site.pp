@@ -60,6 +60,6 @@ node 'windows.platform9.puppet.net' {
 
   notify { 'regpaths':
     loglevel => info,
-    message  => "The reg paths are: ${paths_prerequisites}",
+    message  => "The reg paths are: *${paths_prerequisites}",
   }
 }
