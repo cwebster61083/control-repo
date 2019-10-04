@@ -64,3 +64,7 @@ node 'windows.platform9.puppet.net' {
     message  => "The reg paths are: ${a}",
   }
 }
+
+node 'dashboard.platform9.puppet.net' {
+  include puppet_metrics_collector
+}
