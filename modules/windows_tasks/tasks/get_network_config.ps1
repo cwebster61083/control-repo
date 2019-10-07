@@ -1,4 +1,4 @@
-Get-WmiObject win32_networkadapterconfiguration -Filter 'ipenabled = "true"' | select `
+Get-WmiObject win32_networkadapterconfiguration -Filter 'ipenabled = "true"' | Select-Object `
     PSComputerName,
     DNSHostName,
     Caption,
