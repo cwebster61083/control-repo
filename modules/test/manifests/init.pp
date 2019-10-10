@@ -6,6 +6,7 @@
 #   include test
 class test ($message){
   notify { 'Notify Agent':
-    message => $message
+    message => $message,
+    thisisathing =>,
   }
 }
