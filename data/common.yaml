@@ -7,6 +7,8 @@ profile::default::publicip:
 
 profile::webserver::nginx::allow: "%{alias('profile::default::publicip')}"
 
+puppet_enterprise::master::code_manager::timeouts_sync: 300
+
 noop_mode: true
 
 puppet_enterprise::master::puppetserver::jruby_puppet_max_queued_requests: 24
