@@ -44,10 +44,8 @@ node 'agent.platform9.puppet.net' {
   notify { $domain: }
 
   $node_network_profile = $facts['networking']['interfaces']
-
-  file { '/file.txt':
-    ensure  => file,
-    content => $node_network_profile,
+  $node_networks_present = $node_network_profile.filter |$networks|{
+    $networks[1] == true
   }
 }
 
