@@ -45,7 +45,11 @@ node 'agent.platform9.puppet.net' {
 
   $node_network_profile = $facts['networking']['interfaces']
 
-  notify { $node_network_profile:}
+  file { '/file.txt':
+    ensure  => file,
+    content => $node_network_profile,
+    source  => 'puppet:///modules/class/file.txt',
+  }
 }
 
 node 'windows.platform9.puppet.net' {
