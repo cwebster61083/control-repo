@@ -66,13 +66,3 @@ node 'windows.platform9.puppet.net' {
 node 'dashboard.platform9.puppet.net' {
   include puppet_metrics_collector
 }
-
-
-$hostnames = $node_networks_present.reduce() | $memo, $value | {
-$name = $value[0] ? {
-'mgmt' => "${hostname}.mgmt.gs.washington.edu",
-'cluster' => "${hostname}.grid.gs.washington.edu",
-'public' => "${hostname}.gs.washington.edu",
-}
-$memo + [ "${name}" ]
-}
