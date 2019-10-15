@@ -34,7 +34,6 @@ node 'master.puppetdebug.vlan' {
   notify { 'This is the master': }
 
   $data = {a => 1, b => 2, c => 3}
-  $filtered_data = $data.filter |$items| { $items =~ /berry$/ }
 
   notify { String($data): }
 }
