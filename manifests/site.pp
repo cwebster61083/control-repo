@@ -32,6 +32,11 @@ node default {
 
 node 'master.puppetdebug.vlan' {
   notify { 'This is the master': }
+
+  $data = ['orange', 'blueberry', 'raspberry']
+  $filtered_data = $data.filter |$items| { $items =~ /berry$/ }
+
+  notify { String($data): }
 }
 
 node 'agent.platform9.puppet.net' {
