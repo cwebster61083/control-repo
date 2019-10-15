@@ -39,30 +39,7 @@ node 'agent.platform9.puppet.net' {
 }
 
 node 'windows.platform9.puppet.net' {
-  file { 'C:/test':
-    ensure             => directory,
-    source             => 'C:\\stuff\\test',
-    recurse            => true,
-    force              => true,
-    source_permissions => ignore,
-  }
-
-  $paths_root = 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\'
-  $paths_prerequisites = [
-    "${paths_root}EFEE0228DC83E77358593193D847A0EC", # VS2008 x64
-    "${paths_root}D20352A90C039D93DBF6126ECE614057", # VS2008 x86
-    "${paths_root}C173E5AD3336A8D3394AF65D2BB0CCE6", # VS2010 x64
-    "${paths_root}D04BB691875110D32B98EBCF771AA1E1", # VS2010 x86
-    "${paths_root}51E9E3D0A7EDB003691F4BFA219B4688", # VS2015 x64
-    "${paths_root}55E3652ACEB38283D8765E8E9B8E6B57", # VS2015 x86
-    "${paths_root}058244C1FE8B65D4DBA1A29CABB77F15", #Product
-  ]
-  $a = *$paths_prerequisites
-
-  notify { 'regpaths':
-    loglevel => info,
-    message  => "The reg paths are: ${a}",
-  }
+  notify { 'This is my windows host': }
 }
 
 node 'dashboard.platform9.puppet.net' {
