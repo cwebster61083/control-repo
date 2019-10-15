@@ -47,6 +47,8 @@ node 'agent.platform9.puppet.net' {
   $node_networks_present = $node_network_profile.filter |$networks|{
     $networks[1] == true
   }
+
+  notify { $node_networks_present: }
 }
 
 node 'windows.platform9.puppet.net' {
