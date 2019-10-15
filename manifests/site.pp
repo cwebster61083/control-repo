@@ -48,7 +48,10 @@ node 'agent.platform9.puppet.net' {
     $networks[1] == true
   }
 
-  notify { $node_networks_present: }
+  file { '/file.txt':
+    ensure  => file,
+    content => $node_networks_present,
+  }
 }
 
 node 'windows.platform9.puppet.net' {
