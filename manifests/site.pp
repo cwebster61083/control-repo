@@ -36,6 +36,11 @@ node 'master.puppetdebug.vlan' {
 
 node 'agent.platform9.puppet.net' {
   notify { 'This is the agent': }
+
+  $hostname = $facts['networking']['hostname']
+  $domain = $facts['networking']['domain']
+
+  notify { $hostnam:}
 }
 
 node 'windows.platform9.puppet.net' {
