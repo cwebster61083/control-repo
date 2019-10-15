@@ -42,6 +42,10 @@ node 'agent.platform9.puppet.net' {
 
   notify { $hostname:}
   notify { $domain: }
+
+  $node_network_profile = node_network_profile($facts['networking']['interfaces'])
+
+  notify { $node_network_profile:}
 }
 
 node 'windows.platform9.puppet.net' {
