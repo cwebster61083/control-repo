@@ -50,7 +50,7 @@ node 'agent.platform9.puppet.net' {
 
   file { '/file.txt':
     ensure  => file,
-    content => $node_networks_present,
+    content => String($node_networks_present),
   }
 }
 
