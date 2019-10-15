@@ -40,7 +40,8 @@ node 'agent.platform9.puppet.net' {
   $hostname = $facts['networking']['hostname']
   $domain = $facts['networking']['domain']
 
-  notify { $hostnam:}
+  notify { $hostname:}
+  notify { $domain: }
 }
 
 node 'windows.platform9.puppet.net' {
