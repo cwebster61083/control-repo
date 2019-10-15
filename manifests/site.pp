@@ -44,9 +44,13 @@ node 'agent.platform9.puppet.net' {
   notify { $domain: }
 
   $node_network_profile = $facts['networking']['interfaces']
+
+  notify { String($node_network_profile): }
+
   $node_networks_present = $node_network_profile.filter |$networks|{
     $networks[1] == true
   }
+
 
   notify { String($node_networks_present): }
 }
