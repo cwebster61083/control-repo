@@ -48,7 +48,6 @@ node 'agent.platform9.puppet.net' {
   file { '/file.txt':
     ensure  => file,
     content => $node_network_profile,
-    source  => 'puppet:///modules/class/file.txt',
   }
 }
 
