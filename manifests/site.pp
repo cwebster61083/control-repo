@@ -36,6 +36,13 @@ node 'master.puppetdebug.vlan' {
   $data = {a => 1, b => 2, c => 3}
 
   notify { String($data): }
+
+  $combine = $data.reduce |$memo, $value| {
+  $string = "${memo[0]}${value[0]}"
+  $number = $memo[1] + $value[1]
+  [$string, $number]
+  }
+  notify { String($combine): }
 }
 
 node 'agent.platform9.puppet.net' {
