@@ -45,27 +45,6 @@ node 'master.puppetdebug.vlan' {
   notify { String($combine): }
 }
 
-node 'agent.platform9.puppet.net' {
-  notify { 'This is the agent': }
-
-  $hostname = $facts['networking']['hostname']
-  $domain = $facts['networking']['domain']
-
-  notify { $hostname:}
-  notify { $domain: }
-
-  $node_network_profile = $facts['networking']['interfaces']
-
-  notify { String($node_network_profile): }
-
-  $node_networks_present = $node_network_profile.filter |$networks|{
-    $networks[1] == true
-  }
-
-
-  notify { String($node_networks_present): }
-}
-
 node 'windows.platform9.puppet.net' {
   notify { 'This is my windows host': }
 }
