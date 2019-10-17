@@ -18,7 +18,6 @@ forge 'https://forge.puppet.com'
 
 mod 'puppetlabs-puppet_agent', '2.2.0'
 mod 'puppetlabs-inifile', '3.1.0'
-mod 'puppetlabs-support_tasks', '1.0.9'
 mod 'puppet-nginx', :latest
 mod 'puppetlabs-cd4pe', :latest
 # Requirements for cd4pe
