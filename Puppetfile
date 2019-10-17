@@ -17,6 +17,7 @@ forge 'https://forge.puppet.com'
 #  :branch => 'docs_experiment'
 
 mod 'puppetlabs-puppet_agent', '2.2.0'
+mod 'puppetlabs-inifile', '3.1.0'
 mod 'puppet-nginx', :latest
 mod 'puppetlabs-cd4pe', :latest
 # Requirements for cd4pe
