@@ -4,6 +4,6 @@ if($service.StartMode -eq "Disabled"){
   echo "Puppet agent is disabled"
 }
 else{
-  write-error "Puppet agent is enabled"
+  echo "Puppet agent is enabled"
   EXIT 1
 } 
