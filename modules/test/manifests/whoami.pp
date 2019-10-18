@@ -3,6 +3,7 @@
 # A description of what this class does
 #
 # @example
-#   include test
-
-notify { 'This is a test module': }
+#   include test::whoami
+class test::whoami {
+  notify { 'I am a test module.': }
+}

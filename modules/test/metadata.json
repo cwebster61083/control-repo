@@ -32,25 +32,6 @@
       "operatingsystemrelease": [
         "7"
       ]
-    },
-    {
-      "operatingsystem": "Debian",
-      "operatingsystemrelease": [
-        "9"
-      ]
-    },
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [
-        "18.04"
-      ]
-    },
-    {
-      "operatingsystem": "windows",
-      "operatingsystemrelease": [
-        "2019",
-        "10"
-      ]
     }
   ],
   "requirements": [
@@ -59,7 +40,7 @@
       "version_requirement": ">= 4.10.0 < 7.0.0"
     }
   ],
-  "pdk-version": "1.13.0",
+  "pdk-version": "1.14.0",
   "template-url": "pdk-default#1.10.0",
   "template-ref": "1.10.0-0-gbba9ac3"
 }
