@@ -19,6 +19,11 @@ forge 'https://forge.puppet.com'
 mod 'puppetlabs-puppet_agent', '2.2.0'
 mod 'puppetlabs-inifile', '3.1.0'
 mod 'puppetlabs-support_tasks', '1.0.9'
+
+# Requirements for Bolt PE
+mod 'puppetlabs-bolt_shim', '0.3.0'
+mod 'puppetlabs-apply_helpers', '0.1.0'
+
 mod 'puppet-nginx', :latest
 mod 'puppetlabs-cd4pe', :latest
 # Requirements for cd4pe
