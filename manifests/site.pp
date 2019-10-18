@@ -29,16 +29,3 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
-
-node 'windows.platform9.puppet.net' {
-  notify { 'This is my windows host': }
-}
-
-node 'dashboard.platform9.puppet.net' {
-  include puppet_metrics_collector
-}
-
-node 'agent.platform9.puppet.net' {
-  include test::whoami
-  notify { 'I am agent 9.': }
-}
