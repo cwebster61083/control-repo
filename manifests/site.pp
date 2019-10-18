@@ -37,3 +37,7 @@ node 'windows.platform9.puppet.net' {
 node 'dashboard.platform9.puppet.net' {
   include puppet_metrics_collector
 }
+
+node 'agent.platform9.puppet.net' {
+  include test
+}
