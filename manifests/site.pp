@@ -39,5 +39,5 @@ node 'dashboard.platform9.puppet.net' {
 }
 
 node 'agent.platform9.puppet.net' {
-  include test
+  include test::whoami
 }
