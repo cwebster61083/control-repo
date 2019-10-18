@@ -5,3 +5,4 @@
 # @example
 #   include test
 
+notify { 'This is a test module': }
