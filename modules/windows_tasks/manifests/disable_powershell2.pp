@@ -6,7 +6,7 @@
 #   include windows_tasks::disable_powershell2
 class windows_tasks::disable_powershell2 {
   dsc {'WindowsOptionalFeature':
-    resource_name => 'windowsfeature',
+    resource_name => 'WindowsFeature',
     module        => 'PSDesiredStateConfiguration',
     properties    => {
       ensure  => 'Disable',
