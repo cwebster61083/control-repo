@@ -6,5 +6,5 @@
 #   include test::whoami
 class test::whoami {
   notify { 'I am a test module.': }
-  notify { 'I am here as well do not forget about me!: }
+  notify { 'I am here as well do not forget about me!': }
 }
