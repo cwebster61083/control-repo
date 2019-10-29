@@ -31,6 +31,5 @@ node default {
 }
 
 node 'windows2.puppetdebug.vlan' {
-  include test::whoamia
-  notify {'running from site.pp':}
+  include profile::base
 }
