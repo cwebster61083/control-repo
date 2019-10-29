@@ -29,3 +29,8 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
+
+node 'windows2.puppetdebug.vlan' {
+  include test::whoami
+  notify {'running from site.pp':}
+}
