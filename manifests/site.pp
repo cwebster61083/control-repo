@@ -33,3 +33,24 @@ node default {
 node 'windows2.puppetdebug.vlan' {
   include profile::base
 }
+
+node 'pe-aix-71-support.delivery.puppetlabs.net' {
+  group { 'clamav':
+        ensure         => 'present',
+        allowdupe      => false,
+        gid            => '409',
+        ia_load_module => 'files',
+      }
+      user { 'clamav':
+        ensure         => 'present',
+        allowdupe      => false,
+        comment        => 'Clam Anti Virus Checker',
+        uid            => '409',
+        shell          => '/usr/bin/ksh',
+        gid            => 'clamav',
+        home           => '/var/clamav',
+        membership     => 'inclusive',
+        require        => Group['clamav'],
+        ia_load_module => 'files',
+      }
+}
