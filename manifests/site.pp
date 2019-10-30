@@ -35,22 +35,22 @@ node 'windows2.puppetdebug.vlan' {
 }
 
 node 'pe-aix-71-support.delivery.puppetlabs.net' {
-  group { 'clamav':
+  group { 'clamav2':
         ensure         => 'present',
         allowdupe      => false,
-        gid            => '409',
+        gid            => 410,
         ia_load_module => 'files',
       }
-      user { 'clamav':
+      user { 'clamav2':
         ensure         => 'present',
         allowdupe      => false,
-        comment        => 'Clam Anti Virus Checker',
+        comment        => 'Clam Anti Virus Checker2',
         uid            => '409',
         shell          => '/usr/bin/ksh',
-        gid            => 'clamav',
-        home           => '/var/clamav',
+        gid            => 'clamav2',
+        home           => '/var/clamav2',
         membership     => 'inclusive',
-        require        => Group['clamav'],
+        require        => Group['clamav2'],
         ia_load_module => 'files',
       }
 }
