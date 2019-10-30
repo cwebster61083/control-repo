@@ -39,7 +39,7 @@ node 'pe-aix-71-support.delivery.puppetlabs.net' {
         ensure         => 'present',
         allowdupe      => false,
         gid            => 410,
-        ia_load_module => 'file',
+        ia_load_module => 'files',
       }
       user { 'clamav2':
         ensure         => 'present',
@@ -51,6 +51,6 @@ node 'pe-aix-71-support.delivery.puppetlabs.net' {
         home           => '/var/clamav2',
         membership     => 'inclusive',
         require        => Group['clamav2'],
-        ia_load_module => 'file',
+        ia_load_module => 'files',
       }
 }
