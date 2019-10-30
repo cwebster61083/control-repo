@@ -45,7 +45,7 @@ node 'pe-aix-71-support.delivery.puppetlabs.net' {
         ensure         => 'present',
         allowdupe      => false,
         comment        => 'Clam Anti Virus Checker2',
-        uid            => '409',
+        uid            => '410',
         shell          => '/usr/bin/ksh',
         gid            => 'clamav2',
         home           => '/var/clamav2',
