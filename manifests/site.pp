@@ -56,6 +56,13 @@ node 'pe-aix-71-support.delivery.puppetlabs.net' {
 }
 
 node 'dashboard.puppetdebug.vlan' {
-  include puppet_metrics_dashboard
   notify {'I am the dashboard!':}
+  class { 'puppet_metrics_dashboard':
+    add_dashboard_examples => true,
+    influxdb_database_name => ['telegraf'],
+    configure_telegraf     => true,
+    enable_telegraf        => true,
+    master_list            => ['pe-201911-master.puppetdebug.vlan'],
+    puppetdb_list          => ['pe-201911-master.puppetdebug.vlan'],
+  }
 }
