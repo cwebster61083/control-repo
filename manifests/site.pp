@@ -56,5 +56,6 @@ node 'pe-aix-71-support.delivery.puppetlabs.net' {
 }
 
 node 'dashboard.puppetdebug.vlan' {
+  include puppet_metrics_dashboard
   notify {'I am the dashboard!':}
 }
