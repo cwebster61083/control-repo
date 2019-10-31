@@ -62,7 +62,7 @@ node 'dashboard.puppetdebug.vlan' {
 node 'pe-201911-master.puppetdebug.vlan' {
   package {'toml-rb':
     ensure => present,
-    provider => 'puppetserver_gem',
+    provider => 'puppet_gem',
     notify => Service['pe-puppetserver']
   } 
 }
