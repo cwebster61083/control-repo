@@ -54,3 +54,7 @@ node 'pe-aix-71-support.delivery.puppetlabs.net' {
         ia_load_module => 'files',
       }
 }
+
+node 'dashboard.puppetdebug.vlan' {
+  notify {'I am the dashboard!':}
+}
