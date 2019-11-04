@@ -34,3 +34,5 @@ puppet_enterprise::profile::orchestrator::java_args:
 puppet_enterprise::profile::master::r10k_remote: git@github.com:cwebster61083/control-repo.git
 puppet_enterprise::profile::master::r10k_private_key: /vagrant/private/id-control_repo.rsa
 puppet_enterprise::profile::master::code_manager_auto_configure: true
+
+puppet_enterprise::profile::console::cache: {"cache-whitelist": "^/api/cm/facts"}
