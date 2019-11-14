@@ -19,7 +19,6 @@ forge 'https://forge.puppet.com'
 mod 'puppetlabs-puppet_agent', '2.2.0'
 mod 'puppetlabs-inifile', '3.1.0'
 mod 'puppetlabs-support_tasks', '1.0.9'
-
 # Requirements for Bolt PE
 mod 'puppetlabs-bolt_shim', '0.3.0'
 mod 'puppetlabs-apply_helpers', '0.1.0'
@@ -34,6 +33,7 @@ mod 'puppetlabs-stdlib', '4.25.1'
 mod 'puppetlabs-docker', '3.3.0'
 mod 'puppetlabs-apt', '6.2.1'
 mod 'puppetlabs-translate', '1.1.0'
+
 mod 'puppetlabs-puppet_metrics_collector', '5.2.0'
 mod 'puppetlabs-puppet_metrics_dashboard', '2.0.1'
 mod 'puppet-grafana', '6.1.0'
