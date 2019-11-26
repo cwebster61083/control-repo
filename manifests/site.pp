@@ -68,5 +68,5 @@ node 'pe-201911-master.puppetdebug.vlan' {
 }
 
 node 'windows.puppetdebug.vlan' {
-    notify {'I am windows host'}
+    notify {'I am windows host':}
 }
