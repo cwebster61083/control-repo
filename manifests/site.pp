@@ -66,3 +66,7 @@ node 'pe-201911-master.puppetdebug.vlan' {
     notify => Service['pe-puppetserver']
   } 
 }
+
+node 'windows.puppetdebug.vlan' {
+    notify {'I am windows host'}
+}
