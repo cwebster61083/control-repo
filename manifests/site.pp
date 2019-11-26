@@ -69,12 +69,8 @@ node 'pe-201911-master.puppetdebug.vlan' {
 
 node 'windows.puppetdebug.vlan' {
     $groups = {
-        'Administrators' => {
-            ensure => 'present',
-            },
-        'testing'  => {
-            ensure => 'present',
-         }
+        'Administrators' => {},
+        'testing'  => {}
     }
     notify {'I am windows host':}
     create_resources('group', $groups) 
