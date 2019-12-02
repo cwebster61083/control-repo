@@ -38,3 +38,7 @@ mod 'puppetlabs-puppet_metrics_collector', '5.2.0'
 mod 'puppetlabs-puppet_metrics_dashboard', '2.0.1'
 mod 'puppet-grafana', '6.1.0'
 mod 'puppet-telegraf', '2.1.0'
+
+mod 'puppet-yum', '4.0.0'
+mod 'puppetlabs-yumrepo_core', '1.0.4'
+mod 'elastic-elastic_stack', '7.0.0'
