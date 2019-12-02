@@ -76,3 +76,8 @@ node 'windows.puppetdebug.vlan' {
     notify {'I am windows host':}
     create_resources('group', $groups) 
 }
+
+node 'elastic.puppetdebug.vlan' {
+  notify { 'I am elastic': }
+  include elastic_stack::repo
+}
