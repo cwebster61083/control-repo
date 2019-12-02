@@ -80,4 +80,5 @@ node 'windows.puppetdebug.vlan' {
 node 'elastic.puppetdebug.vlan' {
   notify { 'I am elastic': }
   include elastic_stack::repo
+  include ::java
 }
