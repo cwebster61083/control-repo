@@ -82,7 +82,8 @@ node 'elastic.puppetdebug.vlan' {
   include elastic_stack::repo
   include ::java
   class { 'elasticsearch':
-    ensure => 'present',
+    ensure  => 'present',
+    version => '7.5',
   }
   elasticsearch::instance { 'es-01': }
 }
