@@ -80,7 +80,9 @@ node 'windows.puppetdebug.vlan' {
 node 'elastic.puppetdebug.vlan' {
   notify { 'I am elastic': }
   include elastic_stack::repo
-  include ::java
+  class { 'java' :
+    package => 'java-1.8.0-openjdk-devel',
+  }
   class { 'elasticsearch':}
   elasticsearch::instance { 'es-01': }
 }
