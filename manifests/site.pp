@@ -84,7 +84,7 @@ node 'elastic.puppetdebug.vlan' {
     package => 'java-1.8.0-openjdk-devel',
   }
   class { 'elasticsearch':
-    restart_on_change => true
+    restart_on_change => true,
   }
   elasticsearch::instance { 'es-01':
     jvm_options => [
