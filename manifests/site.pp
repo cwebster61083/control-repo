@@ -84,5 +84,24 @@ node 'elastic.puppetdebug.vlan' {
     package => 'java-1.8.0-openjdk-devel',
   }
   class { 'elasticsearch':}
-  elasticsearch::instance { 'es-01': }
+  elasticsearch::instance { 'es-01':
+    jvm_options => [
+      '-Xms2g',
+      '-Xmx2g',
+      '#PrintGCDetails',
+      '#PrintGCDateStamps',
+      '#PrintTenuringDistribution',
+      '#PrintGCApplicationStoppedTime',
+      "#Xloggc",
+      '#UseGCLogFileRotation',
+      "#NumberOfGCLogFiles",
+      "#GCLogFileSize",
+      "#XX:UseConcMarkSweepGC",
+    ],
+    config      => {
+      #  'xpack.monitoring.collection.enabled' => true,
+      'network.host' => '127.0.0.1',
+      'http.port'    => '8200',
+    },
+  }
 }
