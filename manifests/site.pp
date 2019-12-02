@@ -83,7 +83,9 @@ node 'elastic.puppetdebug.vlan' {
   class { 'java' :
     package => 'java-1.8.0-openjdk-devel',
   }
-  class { 'elasticsearch':}
+  class { 'elasticsearch':
+    restart_on_change => true
+  }
   elasticsearch::instance { 'es-01':
     jvm_options => [
       '-Xms2g',
