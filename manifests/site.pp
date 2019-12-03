@@ -110,6 +110,6 @@ node 'elastic.puppetdebug.vlan' {
   class { 'kibana' :
     config => {
       'server.port' => '8080',
-    }
+    },
   }
 }
