@@ -107,5 +107,9 @@ node 'elastic.puppetdebug.vlan' {
       'cluster.initial_master_nodes' => 'elastic.puppetdebug.vlan',
     },
   }
-  class { 'kibana' : }
+  class { 'kibana' :
+    config => {
+      'server.port' => '8080',
+    }
+  }
 }
