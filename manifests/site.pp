@@ -102,7 +102,7 @@ node 'elastic.puppetdebug.vlan' {
     ],
     config      => {
       #  'xpack.monitoring.collection.enabled' => true,
-      'network.host' => '_site_',
+      'network.host' => '127.0.0.1',
       'http.port'    => '8200',
     },
   }
