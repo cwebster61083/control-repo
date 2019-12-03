@@ -102,9 +102,10 @@ node 'elastic.puppetdebug.vlan' {
     ],
     config      => {
       #  'xpack.monitoring.collection.enabled' => true,
-      'network.host' => '0.0.0.0',
-      'http.port'    => '8200',
+      'network.host'                 => '0.0.0.0',
+      'http.port'                    => '8200',
       'cluster.initial_master_nodes' => 'elastic.puppetdebug.vlan',
     },
   }
+  class { 'kibana' : }
 }
