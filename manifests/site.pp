@@ -104,6 +104,7 @@ node 'elastic.puppetdebug.vlan' {
       #  'xpack.monitoring.collection.enabled' => true,
       'network.host' => '0.0.0.0',
       'http.port'    => '8200',
+      'cluster.initial_master_nodes' => 'elastic.puppetdebug.vlan',
     },
   }
 }
