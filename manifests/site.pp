@@ -115,3 +115,10 @@ node 'elastic.puppetdebug.vlan' {
     },
   }
 }
+
+node 'replica.puppetdebug.vlan' {
+  notify { 'I am the replica': }
+  class { 'java' :
+    package => 'java-1.8.0-openjdk-devel',
+  }
+}
