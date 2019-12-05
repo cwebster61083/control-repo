@@ -132,6 +132,6 @@ node 'master.puppetdebug.vlan' {
   include logstash
   file { '/etc/logstash/conf.d/logstash-filter.conf':
   ensure => file,
-  source => 'logstash-filter.conf';
+  source => 'files/logstash-filter.conf';
   }
 }
