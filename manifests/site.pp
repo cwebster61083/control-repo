@@ -114,6 +114,10 @@ node 'elastic.puppetdebug.vlan' {
       'server.host' => '0.0.0.0',
     },
   }
+  file { 'logstash-filter.conf':
+    ensure => file,
+    source => 'logstash-filter.conf';
+  }
 }
 
 node 'replica.puppetdebug.vlan' {
