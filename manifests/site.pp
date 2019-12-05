@@ -125,7 +125,7 @@ node 'replica.puppetdebug.vlan' {
 }
 
 node 'master.puppetdebug.vlan' {
-  notify { 'I am the master' }
+  notify { 'I am the master': }
   class { 'java' :
     package => 'java-1.8.0-openjdk-devel',
   }
