@@ -122,6 +122,10 @@ node 'replica.puppetdebug.vlan' {
     package => 'java-1.8.0-openjdk-devel',
   }
   include logstash
+  file { '/etc/logstash/conf.d/logstash-filter.conf':
+    ensure => file,
+    source => 'puppet:///modules/test/logstash-filter.conf',
+  }
 }
 
 node 'master.puppetdebug.vlan' {
