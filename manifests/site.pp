@@ -133,7 +133,12 @@ node 'master.puppetdebug.vlan' {
   class { 'java' :
     package => 'java-1.8.0-openjdk-devel',
   }
-  include logstash
+  class { 'logstash':
+    startup_options => {
+      'LS_NICE' => '10',
+      'LS_USER' => 'root',
+    },
+  }
   file { '/etc/logstash/conf.d/logstash-filter.conf':
     ensure => file,
     source => 'puppet:///modules/test/logstash-filter.conf',
