@@ -1,4 +1,4 @@
-$LOCKFILE="$(cmd.exe /c "C:\Program Files\Puppet Labs\Puppet\bin\puppet.bat" config print statedir)/agent_disabled.lock"
+$LOCKFILE="$(cmd.exe /c puppet config print statedir)/agent_disabled.lock"
 
 if(Test-Path $LOCKFILE) {
   Write-Output "Puppet agent is disabled"
