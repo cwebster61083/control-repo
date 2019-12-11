@@ -47,4 +47,3 @@ mod 'elastic-logstash', '6.1.5'
 mod 'richardc-datacat', '0.6.2'
 mod 'puppetlabs-java', '6.0.0'
 mod 'puppet-archive', '4.4.0'
-include support-tasks
