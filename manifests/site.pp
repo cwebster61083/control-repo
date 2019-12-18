@@ -55,18 +55,6 @@ node 'pe-aix-71-support.delivery.puppetlabs.net' {
       }
 }
 
-node 'dashboard.puppetdebug.vlan' {
-  notify {'I am the dashboard!':}
-}
-
-node 'pe-201911-master.puppetdebug.vlan' {
-  package {'toml-rb':
-    ensure => present,
-    provider => 'puppet_gem',
-    notify => Service['pe-puppetserver']
-  } 
-}
-
 node 'windows.puppetdebug.vlan' {
     $groups = {
         'Administrators' => {},
