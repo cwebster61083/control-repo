@@ -49,5 +49,5 @@ mod 'puppetlabs-java', '6.0.0'
 mod 'puppet-archive', '4.4.0'
 
 mod 'puppet_logging_dashboard',
-  :git    => 'git@github.com:cwebster61083/puppet_logging_dashboard.git'
-  :commit => '99357fd'
+  :git    => 'git@github.com:cwebster61083/puppet_logging_dashboard.git',
+  :commit => 'feature/initial_development'
