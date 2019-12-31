@@ -47,3 +47,7 @@ mod 'elastic-logstash', '6.1.5'
 mod 'richardc-datacat', '0.6.2'
 mod 'puppetlabs-java', '6.0.0'
 mod 'puppet-archive', '4.4.0'
+
+mod 'puppet_logging_dashboard',
+  :git    => 'git@github.com:cwebster61083/puppet_logging_dashboard.git'
+  :branch => 'feature/initial_development'
