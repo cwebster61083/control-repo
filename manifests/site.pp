@@ -103,5 +103,6 @@ node 'master.puppetdebug.vlan' {
 }
 
 node 'agent-test.puppetdebug.vlan' {
+  notify { 'I am the agent-test': }
   include puppet_logging_dashboard
 }
