@@ -34,37 +34,6 @@ node 'windows2.puppetdebug.vlan' {
   include profile::base
 }
 
-node 'pe-aix-71-support.delivery.puppetlabs.net' {
-  group { 'clamav2':
-        ensure         => 'present',
-        allowdupe      => false,
-        gid            => 410,
-        ia_load_module => 'files',
-      }
-      user { 'clamav2':
-        ensure         => 'present',
-        allowdupe      => false,
-        comment        => 'Clam Anti Virus Checker2',
-        uid            => '410',
-        shell          => '/usr/bin/ksh',
-        gid            => 'clamav2',
-        home           => '/var/clamav2',
-        membership     => 'inclusive',
-        require        => Group['clamav2'],
-        ia_load_module => 'files',
-      }
-}
-
-node 'windows.puppetdebug.vlan' {
-    $groups = {
-        'Administrators' => {},
-        'testing'  => {}
-    }
-    notify {"${groups}":}
-    notify {'I am windows host':}
-    create_resources('group', $groups) 
-}
-
 node 'elastic.puppetdebug.vlan' {
   notify { 'I am elastic': }
   include elastic_stack::repo
@@ -131,4 +100,8 @@ node 'master.puppetdebug.vlan' {
     ensure => file,
     source => 'puppet:///modules/test/logstash-filter.conf',
   }
+}
+
+node 'agent-test.puppetdebug.vlan' {
+  include puppet_logging_dashboard
 }
