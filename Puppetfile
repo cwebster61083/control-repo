@@ -51,3 +51,5 @@ mod 'puppet-archive', '4.4.0'
 mod 'puppet_logging_dashboard',
   :git    => 'git@github.com:cwebster61083/puppet_logging_dashboard.git',
   :commit => 'feature/initial_development'
+
+mod 'puppetlabs-support_tasks', '1.0.9'
