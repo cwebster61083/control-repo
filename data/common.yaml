@@ -39,4 +39,4 @@ puppet_enterprise::profile::console::cache: {"cache-whitelist": "^/api/cm/facts"
 
 pe_repo::compile_master_pool_address: "compile.puppetdebug.vlan"
 
-puppet_enterprise::profile::certificate_authority::client_whitelist: ['foo.bar.com']
+puppet_enterprise::profile::certificate_authority::client_whitelist: ['agent2.puppetdebug.val']
