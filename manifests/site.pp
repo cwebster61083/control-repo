@@ -99,6 +99,7 @@ node 'master.puppetdebug.vlan' {
   file { '/etc/logstash/conf.d/':
     ensure => directory,
     source => 'puppet:///modules/test/conf.d/',
+    force  => true,
   }
 }
 
