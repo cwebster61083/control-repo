@@ -96,9 +96,9 @@ node 'master.puppetdebug.vlan' {
       'LS_USER' => 'root',
     },
   }
-  file { '/etc/logstash/conf.d/puppetserverlog.conf':
-    ensure => file,
-    source => 'puppet:///modules/test/puppetserverlog.conf',
+  file { '/etc/logstash/conf.d/':
+    ensure => directory,
+    source => 'puppet:///modules/test/conf.d/',
   }
 }
 
