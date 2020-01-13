@@ -30,12 +30,6 @@ node default {
   #   class { 'my_class': }
 }
 
-node 'agent2.puppetdebug.vlan' {
-  package { 'pe-client-tools':
-    ensure => installed,
-  }
-}
-
 node 'windows2.puppetdebug.vlan' {
   include profile::base
 }
