@@ -44,8 +44,8 @@ node 'agent2.puppetdebug.vlan' {
     home => '/home/test',
   }
   ssh_keygen { 'testuser':
-    home    => '/home/testuser',
-    require => User['testuser'], 
+    home   => '/home/testuser',
+    notify => User['testuser'],
   }
 }
 
