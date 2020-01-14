@@ -39,8 +39,8 @@ node 'agent2.puppetdebug.vlan' {
     #uid => '501',
     #gid => '20',
   }
-  ssh_keygen { 'testuser':
-    home => '/home/testuser',
+  ssh_keygen { 'test':
+    home => '/home/test',
   }
 }
 
