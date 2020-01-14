@@ -36,7 +36,6 @@ node 'agent2.puppetdebug.vlan' {
     comment    => 'Test User',
     home       => '/home/testuser',
     managehome => true,
-    require    => User['testuser'],
     #shell => '/bin/bash',
     #uid => '501',
     #gid => '20',
