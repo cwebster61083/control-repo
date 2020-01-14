@@ -53,5 +53,3 @@ mod 'puppet_logging_dashboard',
   :commit => 'feature/initial_development'
 
 mod 'puppetlabs-support_tasks', '1.1.0'
-
-mod 'puppet-ssh_keygen', '4.0.0'
