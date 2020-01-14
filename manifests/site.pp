@@ -30,6 +30,12 @@ node default {
   #   class { 'my_class': }
 }
 
+node 'windowsdc.puppetdebug.vlan' {
+  class {'::puppet_agent':
+    package_version => '6.4.3',
+  }
+}
+
 node 'agent2.puppetdebug.vlan' {
   user { 'testuser':
     ensure     => present,
