@@ -31,8 +31,16 @@ node default {
 }
 
 node 'agent2.puppetdebug.vlan' {
+  user { 'testuser':
+    ensure  => present,
+    comment => 'Test User',
+    home    => '/home/testuser',
+    #shell => '/bin/bash',
+    #uid => '501',
+    #gid => '20',
+  }
   ssh_keygen { 'dm_pbgroup':
-    home => '/usr/users/dm_pbgroup',
+    home => '/home/testuser',
   }
 }
 
