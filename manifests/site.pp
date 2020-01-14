@@ -30,6 +30,12 @@ node default {
   #   class { 'my_class': }
 }
 
+node 'agent2.puppetdebug.vlan' {
+  ssh_keygen { 'dm_pbgroup':
+    home => '/usr/users/dm_pbgroup',
+  }
+}
+
 node 'windows2.puppetdebug.vlan' {
   include profile::base
 }
