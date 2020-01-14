@@ -44,9 +44,6 @@ node 'agent2.puppetdebug.vlan' {
   ssh_keygen { 'test':
     home => '/home/test',
   }
-  ssh_keygen { 'testuser':
-    home   => '/home/testuser',
-  }
 }
 
 node 'windows2.puppetdebug.vlan' {
