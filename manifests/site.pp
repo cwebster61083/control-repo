@@ -32,9 +32,10 @@ node default {
 
 node 'agent2.puppetdebug.vlan' {
   user { 'testuser':
-    ensure  => present,
-    comment => 'Test User',
-    home    => '/home/testuser',
+    ensure      => present,
+    comment     => 'Test User',
+    home        => '/home/testuser',
+    managerhome => true,
     #shell => '/bin/bash',
     #uid => '501',
     #gid => '20',
