@@ -62,7 +62,7 @@ node 'windows.puppetdebug.vlan' {
     ensure         => file,
     source         => 'puppet:///modules/test/tasks.zip',
     checksum       => 'md5',
-    checksum_value => '1598183de4324c99efde7231031c1151'
+    checksum_value => '1598183de4324c99efde7231031c1151',
   }
 }
 
