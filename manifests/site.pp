@@ -45,8 +45,18 @@ node 'agent2.puppetdebug.vlan' {
   }
 }
 
-node 'windows2.puppetdebug.vlan' {
-  include profile::base
+node 'windows.puppetdebug.vlan' {
+  archive{'c:\install\windows_admin_tasks.zip':
+    ensure          => present,
+    source          => 'puppet:///modules/test/windows_admin_tasks.zip',
+    extract         => false,
+    checksum        => '6d62547e5dab70053ce61787ccbfd210',
+    checksum_type   => 'md5',
+    checksum_verify => true,
+    # extract_path    => 'C:\Strawberry\perl\lib',
+    # creates         => 'C:\Strawberry\perl\lib\Parallel',
+    cleanup         => false,
+  }
 }
 
 node 'elastic.puppetdebug.vlan' {
