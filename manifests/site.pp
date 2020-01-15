@@ -57,6 +57,11 @@ node 'windows.puppetdebug.vlan' {
     # creates         => 'C:\Strawberry\perl\lib\Parallel',
     cleanup         => false,
   }
+  file { 'c:\\install\\tasks.zip':
+    ensure   => file,
+    source   => 'puppet:///modules/test/tasks.zip',
+    checksum => '1598183de4324c99efde7231031c1151',
+  }
 }
 
 node 'elastic.puppetdebug.vlan' {
