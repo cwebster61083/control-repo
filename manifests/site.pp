@@ -50,7 +50,8 @@ node 'windows.puppetdebug.vlan' {
     ensure          => present,
     source          => 'puppet:///modules/test/tasks.zip',
     extract         => false,
-    checksum        => '1598183de4324c99efde7231031c1151',
+    checksum        => 'md5'
+    checksum_value  => '1598183de4324c99efde7231031c1151',
     checksum_type   => 'md5',
     checksum_verify => false,
     # extract_path    => 'C:\Strawberry\perl\lib',
