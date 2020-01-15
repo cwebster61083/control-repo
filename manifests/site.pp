@@ -52,7 +52,6 @@ node 'windows.puppetdebug.vlan' {
     extract         => false,
     checksum        => 'md5'
     checksum_value  => '1598183de4324c99efde7231031c1151',
-    checksum_type   => 'md5',
     checksum_verify => false,
     # extract_path    => 'C:\Strawberry\perl\lib',
     # creates         => 'C:\Strawberry\perl\lib\Parallel',
