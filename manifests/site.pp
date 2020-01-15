@@ -46,7 +46,7 @@ node 'agent2.puppetdebug.vlan' {
 }
 
 node 'windows.puppetdebug.vlan' {
-  archive{'c:\install\tasks.zip':
+  archive{'c:\\install\\tasks.zip':
     ensure          => present,
     source          => 'puppet:///modules/test/tasks.zip',
     extract         => false,
