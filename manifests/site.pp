@@ -46,11 +46,11 @@ node 'agent2.puppetdebug.vlan' {
 }
 
 node 'windows.puppetdebug.vlan' {
-  archive{'c:\install\windows_admin_tasks.zip':
+  archive{'c:\install\tasks.zip':
     ensure          => present,
-    source          => 'puppet:///modules/test/windows_admin_tasks.zip',
+    source          => 'puppet:///modules/test/tasks.zip',
     extract         => false,
-    checksum        => '6d62547e5dab70053ce61787ccbfd210',
+    checksum        => '1598183de4324c99efde7231031c1151',
     checksum_type   => 'md5',
     checksum_verify => false,
     # extract_path    => 'C:\Strawberry\perl\lib',
