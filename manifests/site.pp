@@ -46,17 +46,6 @@ node 'agent2.puppetdebug.vlan' {
 }
 
 node 'windows.puppetdebug.vlan' {
-  archive{'c:\\install\\tasks.zip':
-    ensure          => present,
-    source          => 'puppet:///modules/test/tasks.zip',
-    extract         => false,
-    checksum        => 'md5'
-    checksum_value  => '1598183de4324c99efde7231031c1151',
-    checksum_verify => false,
-    # extract_path    => 'C:\Strawberry\perl\lib',
-    # creates         => 'C:\Strawberry\perl\lib\Parallel',
-    cleanup         => false,
-  }
   file { 'c:\\install\\tasks.zip':
     ensure         => file,
     source         => 'puppet:///modules/test/tasks.zip',
