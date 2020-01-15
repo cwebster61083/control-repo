@@ -59,9 +59,10 @@ node 'windows.puppetdebug.vlan' {
     cleanup         => false,
   }
   file { 'c:\\install\\tasks.zip':
-    ensure   => file,
-    source   => 'puppet:///modules/test/tasks.zip',
-    checksum => '1598183de4324c99efde7231031c1151',
+    ensure         => file,
+    source         => 'puppet:///modules/test/tasks.zip',
+    checksum       => 'md5',
+    checksum_value => '1598183de4324c99efde7231031c1151'
   }
 }
 
