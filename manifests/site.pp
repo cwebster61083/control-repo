@@ -130,7 +130,7 @@ node 'master.puppetdebug.vlan' {
     source => 'puppet:///modules/test/console-services-api-access-log.conf',
   }
 
-  archive{'c:\install\tasks.zip':
+  archive{'/var/tmp/install/tasks.zip':
     ensure          => present,
     source          => 'puppet:///modules/test/tasks.zip',
     extract         => false,
