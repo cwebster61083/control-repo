@@ -109,6 +109,9 @@ node 'replica.puppetdebug.vlan' {
 
 node 'master.puppetdebug.vlan' {
   notify { 'I am the master': }
+
+  class { 'rampup_profile_puppetmaster':}
+
   class { 'java' :
     package => 'java-1.8.0-openjdk-devel',
   }
