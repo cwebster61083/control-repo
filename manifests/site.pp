@@ -110,10 +110,7 @@ node 'replica.puppetdebug.vlan' {
 node 'master.puppetdebug.vlan' {
   notify { 'I am the master': }
 
-  class { 'rampup_profile_puppetmaster::hiera':
-    owner => 'root',
-    group => 'root',
-  }
+  class { 'rampup_profile_puppetmaster':}
 
 
   class { 'java' :
