@@ -60,3 +60,4 @@ mod 'rampup_profile_puppetmaster',
   :git    => 'https://github.com/Puppet-RampUpProgram/rampup_profile_puppetmaster.git',
   :commit => 'master'
 
+  mod 'puppet-hiera', '4.0.0'
