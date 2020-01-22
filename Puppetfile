@@ -55,3 +55,8 @@ mod 'puppet_logging_dashboard',
 mod 'puppetlabs-support_tasks', '1.1.0'
 
 mod 'puppet-ssh_keygen', '4.0.0'
+
+mode 'rampup_profile_puppetmaster',
+  :git    => 'https://github.com/Puppet-RampUpProgram/rampup_profile_puppetmaster.git'
+  :commit => 'master'
+
