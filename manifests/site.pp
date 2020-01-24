@@ -128,6 +128,11 @@ node 'master.puppetdebug.vlan' {
     source => 'puppet:///modules/test/console-services-api-access-log.conf',
   }
 
+  file { '/etc/logstash/conf.d/puppetserver-access.conf':
+    ensure => file,
+    source => 'puppet:///modules/test/puppetserver-access.conf',
+  }
+
   archive{'/var/tmp/install/tasks.zip':
     ensure          => present,
     source          => 'puppet:///modules/test/tasks.zip',
