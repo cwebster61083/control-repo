@@ -34,7 +34,7 @@ node 'agent2.puppetdebug.vlan' {
   file { '/var/tmp/tasks.zip':
     ensure   => file,
     source   => 'puppet:///modules/test/tasks.zip',
-    checksum => 'md5',
+    checksum => 'sha256',
   }
 }
 
