@@ -41,7 +41,7 @@ node 'agent2.puppetdebug.vlan' {
 node 'windows.puppetdebug.vlan' {
   file { 'c:\\test.log':
     ensure => file,
-    source => 'file://webster.prv/testing/test.log',
+    source => 'file://windowsdc/testing/test.log',
   }
 }
 
