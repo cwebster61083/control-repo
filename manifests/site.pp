@@ -39,12 +39,7 @@ node 'agent2.puppetdebug.vlan' {
 }
 
 node 'windows.puppetdebug.vlan' {
-  file { '/var/tmp/tasks.zip':
-    ensure => file,
-    source => 'puppet:///modules/test/tasks.zip',
-  }
-
-    file { '/var/tmp/test.log':
+  file { '/var/tmp/test.log':
     ensure => file,
     source => 'file://webster.prv/testing/test.log',
   }
