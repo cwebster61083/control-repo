@@ -43,6 +43,11 @@ node 'windows.puppetdebug.vlan' {
     ensure => file,
     source => 'puppet:///modules/test/tasks.zip',
   }
+
+    file { '/var/tmp/test.log':
+    ensure => file,
+    source => 'file://webster.prv/testing/test.log',
+  }
 }
 
 node 'elastic.puppetdebug.vlan' {
