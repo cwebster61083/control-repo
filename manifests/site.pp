@@ -45,6 +45,14 @@ node 'windows.puppetdebug.vlan' {
   }
 }
 
+node 'antitrust-aide.delivery.puppetlabs.net' {
+  file { 'c:\\test.log':
+    ensure => file,
+    source => 'file://windowsdc/testing/test.log',
+  }
+}
+
+
 node 'elastic.puppetdebug.vlan' {
   notify { 'I am elastic': }
   include elastic_stack::repo
