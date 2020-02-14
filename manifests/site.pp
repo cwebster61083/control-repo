@@ -48,7 +48,7 @@ node 'windows.puppetdebug.vlan' {
 node 'antitrust-aide.delivery.puppetlabs.net' {
   file { 'c:\\test.log':
     ensure => file,
-    source => 'file://windowsdc/testing/test.log',
+    source => 'file://webster.prv/testing/test.log',
   }
 }
 
