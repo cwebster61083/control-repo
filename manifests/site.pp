@@ -50,6 +50,10 @@ node 'antitrust-aide.delivery.puppetlabs.net' {
     ensure => file,
     source => 'file://webster.prv/testing/test.log',
   }
+  file { 'c:\\test.log':
+    ensure => file,
+    source => 'file://windowsdc.webster.prv/testing/test.log',
+  }
 }
 
 
