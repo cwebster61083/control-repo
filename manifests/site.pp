@@ -158,6 +158,6 @@ node 'agent-test.puppetdebug.vlan' {
 
 node 'lofty-pseudonym.delivery.puppetlabs.net' {
   package { 'opensssl':
-    ensure   => minimum_version('openssl', '1.0.2', '1.0.2'),
+    ensure   => minimum_version('openssl', '1.0.2k', '1.0.2k'),
   }
 }
