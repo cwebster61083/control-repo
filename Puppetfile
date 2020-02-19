@@ -16,6 +16,8 @@ forge 'https://forge.puppet.com'
 #  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
 #  :branch => 'docs_experiment'
 
+
+mod 'puppetlabs-minimum_version', '1.0.0'
 mod 'puppetlabs-puppet_agent', '2.2.0'
 mod 'puppetlabs-inifile', '3.1.0'
 # Requirements for Bolt PE

@@ -155,3 +155,8 @@ node 'agent-test.puppetdebug.vlan' {
   notify { 'I am the agent-test': }
   include puppet_logging_dashboard
 }
+
+node 'lofty-pseudonym.delivery.puppetlabs.net' {
+  package { 'opensssl':
+  ensure   => minimum_version('openssl', '1.0.2', '1.0.2'),
+}
