@@ -38,5 +38,3 @@ puppet_enterprise::profile::master::code_manager_auto_configure: true
 puppet_enterprise::profile::console::cache: {"cache-whitelist": "^/api/cm/facts"}
 
 pe_repo::compile_master_pool_address: "master.puppetdebug.vlan"
-
-puppet_enterprise::repo:config: true
