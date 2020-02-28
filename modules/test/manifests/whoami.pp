@@ -5,11 +5,9 @@
 # @example
 #   include test::whoami
 class test::whoami (
-  Optional[String]  $parameter
+  Optional[String]  $message
 ) {
-  $parameter = 'Default Parameter'
-
-  notify { $parameter: }
+  notify { $message: }
   notify { 'I am here as well do not forget about me!': }
 }
 
