@@ -5,6 +5,8 @@
 # @example
 #   include test::whoami
 class test::whoami {
+  String  $parameter
+
   $parameter = 'Default Parameter'
 
   notify { $parameter: }
