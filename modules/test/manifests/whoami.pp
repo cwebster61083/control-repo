@@ -5,7 +5,7 @@
 # @example
 #   include test::whoami
 class test::whoami (
-  $message = Sensitive($message)
+  String $message = 'Default Message'
 ) {
   notify { $message: }
   notify { 'I am here as well do not forget about me!': }
