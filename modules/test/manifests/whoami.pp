@@ -5,7 +5,7 @@
 # @example
 #   include test::whoami
 class test::whoami (
-  String  $parameter
+  Optional[String]  $parameter
 ) {
   $parameter = 'Default Parameter'
 
