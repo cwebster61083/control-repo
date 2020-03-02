@@ -166,5 +166,6 @@ node 'master2019.puppetdebug.vlan' {
   exec { 'testexec':
     command => 'echo $(hostname -f)',
     path    => ['/usr/bin', '/usr/sbin'],
+    unless  => true,
   }
 }
