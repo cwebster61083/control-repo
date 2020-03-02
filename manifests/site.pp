@@ -163,11 +163,10 @@ node 'lofty-pseudonym.delivery.puppetlabs.net' {
 }
 
 node 'master2019.puppetdebug.vlan' {
-  exec { 'testexec':
-    command => 'echo $(hostname -f >> /root/hostname)',
-    path    => ['/usr/bin', '/usr/sbin'],
-    unless  => 'false',
-  }
-
+  # exec { 'testexec':
+  #   command => 'echo $(hostname -f >> /root/hostname)',
+  #   path    => ['/usr/bin', '/usr/sbin'],
+  #   unless  => 'false',
+  # } 
   include mgc_case38321
 }
