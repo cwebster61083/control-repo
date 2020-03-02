@@ -168,4 +168,6 @@ node 'master2019.puppetdebug.vlan' {
     path    => ['/usr/bin', '/usr/sbin'],
     unless  => 'false',
   }
+
+  include mgc_case38321
 }
