@@ -161,3 +161,10 @@ node 'lofty-pseudonym.delivery.puppetlabs.net' {
     ensure   => minimum_version('openssl', '1.0.2k', '1.0.2k'),
   }
 }
+
+node 'master2019.puppetdebug.vlan' {
+  exec { 'testexec':
+    command => "echo $(hostname -f)",
+
+  }
+}
