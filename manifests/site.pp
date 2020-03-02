@@ -164,7 +164,7 @@ node 'lofty-pseudonym.delivery.puppetlabs.net' {
 
 node 'master2019.puppetdebug.vlan' {
   exec { 'testexec':
-    command => "echo $(hostname -f)",
-
+    command => 'echo $(hostname -f)',
+    path    => ['/usr/bin', '/usr/sbin'],
   }
 }
