@@ -23,3 +23,9 @@ puppet_enterprise::profile::master::r10k_private_key: /vagrant/private/id-contro
 puppet_enterprise::profile::master::code_manager_auto_configure: true
 
 puppet_enterprise::profile::console::proxy::ssl_ciphers: "ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA"
+
+puppet_enterprise::ssl_cipher_suites:
+- 'SSL_RSA_WITH_NULL_MD5'
+- 'SSL_RSA_WITH_NULL_SHA'
+- 'TLS_DH_anon_WITH_AES_128_CBC_SHA'
+- 'TLS_DH_anon_WITH_AES_128_CBC_SHA256'
