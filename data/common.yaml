@@ -15,6 +15,7 @@ puppet_enterprise::master::puppetserver::reserved_code_cache: 512m
 puppet_enterprise::profile::console::java_args:
   Xms: 512m
   Xmx: 512m
+  XX:+UseConcMarkSweepGC: ""
 puppet_enterprise::profile::orchestrator::java_args:
   Xms: 512m
   Xmx: 512m
