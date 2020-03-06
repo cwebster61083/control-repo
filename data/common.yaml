@@ -7,28 +7,20 @@ puppet_enterprise::profile::puppetdb::java_args:
   Xms: 512m
   Xmx: 512m
   XX:+UseConcMarkSweepGC: ""
-  XX:+PrintGCDetails: "" 
-  XX:+PrintGCDateStamps: ""
 puppet_enterprise::master::puppetserver::jruby_max_active_instances: 2
 puppet_enterprise::profile::master::java_args:
   Xms: 2048m
   Xmx: 2048m
   XX:+UseConcMarkSweepGC: ""
-  XX:+PrintGCDetails: "" 
-  XX:+PrintGCDateStamps: ""
 puppet_enterprise::master::puppetserver::reserved_code_cache: 512m
 puppet_enterprise::profile::console::java_args:
   Xms: 512m
   Xmx: 512m
   XX:+UseConcMarkSweepGC: ""
-  XX:+PrintGCDetails: "" 
-  XX:+PrintGCDateStamps: ""
 puppet_enterprise::profile::orchestrator::java_args:
   Xms: 512m
   Xmx: 512m
   XX:+UseConcMarkSweepGC: ""
-  XX:+PrintGCDetails: "" 
-  XX:+PrintGCDateStamps: ""
 puppet_enterprise::profile::master::r10k_remote: git@github.com:cwebster61083/control-repo.git
 puppet_enterprise::profile::master::r10k_private_key: /vagrant/private/id-control_repo.rsa
 puppet_enterprise::profile::master::code_manager_auto_configure: true
