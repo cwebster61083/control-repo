@@ -9,6 +9,7 @@ puppet_enterprise::profile::master::java_args:
   Xms: 2048m
   Xmx: 2048m
   XX:+UseConcMarkSweepGC: ""
+  XX:+PrintGCDetails: ""
 puppet_enterprise::master::puppetserver::reserved_code_cache: 512m
 puppet_enterprise::profile::console::java_args:
   Xms: 512m
