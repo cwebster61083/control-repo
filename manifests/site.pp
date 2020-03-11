@@ -43,10 +43,15 @@ node 'windows.puppetdebug.vlan' {
     ensure => file,
     source => 'file://windowsdc/testing/test.log',
   }
-  registry_value { 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA':
+  registry_value { ' Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\testkey':
     ensure => present,
-    type   => dword,
-    data   => 0,
+    type   => string,
+    data   => 'test',
+  }
+  registry_value { 'HKLM\SOFTWARE\Policies\Microsoft\Windows\\\NT\Terminal\\\Services\LicenseServers\lic16iwp.adm.pjm.com':
+    ensure => present,
+    type   => string,
+    data   => 'lic16iwp.adm.pjm.com',
   }
 }
 
