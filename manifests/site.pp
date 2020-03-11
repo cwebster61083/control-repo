@@ -43,10 +43,10 @@ node 'windows.puppetdebug.vlan' {
     ensure => file,
     source => 'file://windowsdc/testing/test.log',
   }
-  registry_value { ' Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\testkey':
+  registry_value { ' Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\test':
     ensure => present,
-    type   => string,
-    data   => 'test',
+    type   => dword,
+    data   => 0,
   }
   registry_value { 'HKLM\SOFTWARE\Policies\Microsoft\Windows\\\NT\Terminal\\\Services\LicenseServers\lic16iwp.adm.pjm.com':
     ensure => present,
