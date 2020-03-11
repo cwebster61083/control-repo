@@ -46,7 +46,7 @@ node 'windows.puppetdebug.vlan' {
   registry_value { 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA':
     ensure => present,
     type   => dword,
-    data   => 0,
+    data   => 1,
   }
 }
 
