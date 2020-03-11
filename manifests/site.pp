@@ -43,12 +43,17 @@ node 'windows.puppetdebug.vlan' {
     ensure => file,
     source => 'file://windowsdc/testing/test.log',
   }
+  registry_value { 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA':
+    ensure => present,
+    type   => dword,
+    data   => 0,
+  }
 }
 
 node 'antitrust-aide.delivery.puppetlabs.net' {
-  # file { 'c:\\test.log':
+  # file { ''c':\\test.log':
   #   ensure => file,
-  #   source => 'file://webster.prv/testing/test.log',
+  #   source => ''file':#webster.prv/testing/test.log',
   # }
   file { 'c:\\test.log':
     ensure => file,
