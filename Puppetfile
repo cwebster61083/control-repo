@@ -19,6 +19,7 @@ forge 'https://forge.puppet.com'
 
 mod 'puppetlabs-puppet_agent', '2.2.0'
 mod 'puppetlabs-inifile', '3.1.0'
+mod 'puppetlabs-registry', '3.1.0'
 # Requirements for Bolt PE
 mod 'puppetlabs-bolt_shim', '0.3.0'
 mod 'puppetlabs-apply_helpers', '0.1.0'
