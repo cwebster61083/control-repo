@@ -1,1 +1,1 @@
-puppet_enterprise::pxp_agent::pxp_loglevel: debug
+puppet_enterprise::pxp_agent::pxp_loglevel: trace
