@@ -30,14 +30,6 @@ node default {
   #   class { 'my_class': }
 }
 
-node 'agent2.puppetdebug.vlan' {
-  file { '/var/tmp/tasks.zip':
-    ensure   => file,
-    source   => 'puppet:///modules/test/tasks.zip',
-    checksum => 'md5',
-  }
-}
-
 node 'windows.puppetdebug.vlan' {
   file { 'c:\\test.log':
     ensure => file,
