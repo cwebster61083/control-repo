@@ -53,6 +53,11 @@ node 'windows.puppetdebug.vlan' {
     type   => string,
     data   => 'lic16iwp.adm.pjm.com',
   }
+  registry_value { 'HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\LicenseServers':
+    ensure => present,
+    type   => string,
+    data   => 'test.adm.pjm.com',
+  }
 }
 
 node 'antitrust-aide.delivery.puppetlabs.net' {
