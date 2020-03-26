@@ -20,7 +20,8 @@ class profile::winrm_config {
             profile  => ['public','private','domain'],
         ;
         'Windows Remote Management (HTTPS-In)':
-            local_port  => '5986',
+            local_port    => '5986',
+            remote_address => '192.168.1.9'
             description => 'Inbound rule for Windows Remote Management via WS-Management. [TCP 5986]',
         ;
         'Windows Remote Management (HTTP-In)':
