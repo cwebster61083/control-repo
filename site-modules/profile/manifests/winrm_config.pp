@@ -6,4 +6,10 @@ class profile::winrm_config {
         manage_master_cert => true,
         manage_client_cert => true,
     }
+    winrmssl {'Puppet Enterprise CA':
+      ensure       => present,
+      issuer       => $facts['puppet_cert_paths']['ca_path'],
+      disable_http => false,
+      require      => Class['windows_puppet_certificates']
+    }
 }
