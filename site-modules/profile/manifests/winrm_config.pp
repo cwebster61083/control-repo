@@ -21,7 +21,6 @@ class profile::winrm_config {
         ;
         'Windows Remote Management (HTTPS-In)':
             local_port    => '5986',
-            remote_address => '10.16.132.168',
             description => 'Inbound rule for Windows Remote Management via WS-Management. [TCP 5986]',
         ;
         'Windows Remote Management (HTTP-In)':
