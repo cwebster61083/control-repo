@@ -25,8 +25,9 @@ class profile::winrm_config {
             description => 'Inbound rule for Windows Remote Management via WS-Management. [TCP 5986]',
         ;
         'Windows Remote Management (HTTP-In)':
-            local_port    => '5985',
-            local_address => '127.0.0.1',
-            description   => 'Restricted inbound rule for local Management via WS-Management. [TCP 5985]',
+            local_port     => '5985',
+            local_address  => '127.0.0.1',
+            remote_address => 'any',
+            description    => 'Restricted inbound rule for local Management via WS-Management. [TCP 5985]',
     }
 }
