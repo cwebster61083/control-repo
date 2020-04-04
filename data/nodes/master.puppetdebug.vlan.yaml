@@ -11,6 +11,8 @@ puppet_enterprise::profile::master::java_args:
   XX:+UseConcMarkSweepGC: ""
   XX:+PrintGCDetails: ""
   XX:+HeapDumpOnOutOfMemoryError: ""
+  XX:HeapDumpPath: "=/var/log/puppetlabs/puppetserver/puppetserver.hprof"
+  Djruby.reify.classes: "=true"
 puppet_enterprise::master::puppetserver::reserved_code_cache: 512m
 puppet_enterprise::profile::console::java_args:
   Xms: 512m
