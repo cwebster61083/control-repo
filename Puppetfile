@@ -25,6 +25,7 @@ mod 'puppetlabs-pwshlib', '0.4.1'
 mod 'puppetlabs-powershell', '3.0.1'
 mod 'nekototori-winrmssl', '2.0.0'
 mod 'geoffwilliams-windows_firewall', '0.5.0'
+mod 'puppet/windows_firewall', '2.0.2'
 # Requirements for Bolt PE
 mod 'puppetlabs-bolt_shim', '0.3.0'
 mod 'puppetlabs-apply_helpers', '0.1.0'
