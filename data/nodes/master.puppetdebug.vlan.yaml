@@ -8,7 +8,6 @@ puppet_enterprise::master::puppetserver::jruby_max_active_instances: 2
 puppet_enterprise::profile::master::java_args:
   Xms: 2048m
   Xmx: 2048m
-  XX:+PrintGCDetails: ""
   XX:+HeapDumpOnOutOfMemoryError: ""
   XX:HeapDumpPath: "=/var/log/puppetlabs/puppetserver/puppetserver.hprof"
   Djruby.reify.classes: "=true"
