@@ -68,4 +68,4 @@ mod 'rampup_profile_puppetmaster',
 
 mod 'puppet-hiera', '4.0.0'
 
-include dart-dp3
+mod 'dart-dp3'
