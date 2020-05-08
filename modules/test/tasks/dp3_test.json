@@ -1,5 +1,9 @@
 {
   "supports_noop": true,
   "description": "test harness",
-  "parameters": {}
+  "parameters": {},
+  "implementations": [
+    {"name": "dp3_test.ps1", "requirements": ["shell"]}
+  ]
 }
+
