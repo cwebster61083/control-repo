@@ -1,6 +1,5 @@
 {
   "supports_noop": true,
   "description": "test harness",
-  "parameters": {},
-  "input_method": "powershell"
+  "parameters": {}
 }
