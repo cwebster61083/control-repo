@@ -67,5 +67,3 @@ mod 'rampup_profile_puppetmaster',
   :commit => 'master'
 
 mod 'puppet-hiera', '4.0.0'
-
-mod 'dart-dp3'
