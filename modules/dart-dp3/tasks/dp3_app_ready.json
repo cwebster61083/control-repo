@@ -1,6 +1,0 @@
-{
-  "supports_noop": true,
-  "description": "Ensure the DP3 application server is ready for connections",
-  "parameters": {},
-  "input_method": "powershell"
-}

@@ -1,7 +1,0 @@
-{
-  "supports_noop": true,
-  "description": "Make certain that the DP3 application server is stopped",
-  "parameters": {},
-  "files": ["dp3/files/TaskUtils.ps1"],
-  "input_method": "powershell"
-}
