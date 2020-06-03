@@ -54,6 +54,14 @@ node 'antitrust-aide.delivery.puppetlabs.net' {
   }
 }
 
+node 'windowsdc.platform9.puppet.net' {
+  file { 'Recursive Copy':
+    ensure  => directory,
+    source  => "C:\\Source",
+    path    => "C:\\Destination",
+    recurse => true,
+}
+}
 
 node 'elastic.puppetdebug.vlan' {
   notify { 'I am elastic': }
