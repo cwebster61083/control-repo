@@ -46,7 +46,7 @@ node 'antitrust-aide.delivery.puppetlabs.net' {
 }
 
 node 'windowsdc.platform9.puppet.net' {
-  mod 'puppetlabs-dsc', '1.9.4'
+
 }
 
 node 'elastic.puppetdebug.vlan' {
