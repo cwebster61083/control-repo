@@ -31,15 +31,6 @@ node default {
 }
 
 node 'windows.puppetdebug.vlan' {
-  file { 'c:\\test.log':
-    ensure => file,
-    source => 'file://windowsdc/testing/test.log',
-  }
-  registry_value { 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA':
-    ensure => present,
-    type   => dword,
-    data   => 0,
-  }
   include role::windows
 }
 
