@@ -46,7 +46,7 @@ node 'antitrust-aide.delivery.puppetlabs.net' {
 }
 
 node 'windowsdc.platform9.puppet.net' {
-
+  notify { 'I am windowsdc': }
 }
 
 node 'elastic.puppetdebug.vlan' {
