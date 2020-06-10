@@ -22,3 +22,4 @@ puppet_enterprise::profile::orchestrator::java_args:
   XX:+UseConcMarkSweepGC: ""
 puppet_enterprise::master::puppetserver::jruby_puppet_max_queued_requests: 48
 puppet_enterprise::master::puppetserver::jruby_puppet_max_retry_delay: 3600
+pe_repo::enable_windows_bulk_pluginsync: false
