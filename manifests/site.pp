@@ -60,8 +60,8 @@ node 'elastic.puppetdebug.vlan' {
   }
   elasticsearch::instance { 'es-01':
     jvm_options => [
-      '-Xms2g',
-      '-Xmx2g',
+      '-Xms4g',
+      '-Xmx4g',
       '#PrintGCDetails',
       '#PrintGCDateStamps',
       '#PrintTenuringDistribution',
@@ -82,8 +82,9 @@ node 'elastic.puppetdebug.vlan' {
   }
   class { 'kibana' :
     config => {
-      'server.port' => '8080',
-      'server.host' => '0.0.0.0',
+      'server.port'                      => '8080',
+      'server.host'                      => '0.0.0.0',
+      'xpack.license_management.enabled' => false,
     },
   }
 }
