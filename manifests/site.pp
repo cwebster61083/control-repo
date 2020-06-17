@@ -108,40 +108,40 @@ node 'replica.puppetdebug.vlan' {
 node 'master.puppetdebug.vlan' {
   notify { 'I am the master': }
 
-  class { 'java' :
-    package => 'java-1.8.0-openjdk-devel',
-  }
-  class { 'logstash':
-    startup_options => {
-      'LS_NICE' => '10',
-      'LS_USER' => 'root',
-    },
-  }
-  file { '/etc/logstash/conf.d/puppetserver-log.conf':
-    ensure => file,
-    source => 'puppet:///modules/test/puppetserver-log.conf',
-  }
-  file { '/etc/logstash/conf.d/console-services-api-access-log.conf':
-    ensure => file,
-    source => 'puppet:///modules/test/console-services-api-access-log.conf',
-  }
+  # #class { 'java' :
+  #   package => 'java-1.8.0-openjdk-devel',
+  # }
+  # class { 'logstash':
+  #   startup_options => {
+  #     'LS_NICE' => '10',
+  #     'LS_USER' => 'root',
+  #   },
+  # }
+  # file { '/etc/logstash/conf.d/puppetserver-log.conf':
+  #   ensure => file,
+  #   source => 'puppet:///modules/test/puppetserver-log.conf',
+  # }
+  # file { '/etc/logstash/conf.d/console-services-api-access-log.conf':
+  #   ensure => file,
+  #   source => 'puppet:///modules/test/console-services-api-access-log.conf',
+  # }
 
-  file { '/etc/logstash/conf.d/puppetserver-access.conf':
-    ensure => file,
-    source => 'puppet:///modules/test/puppetserver-access.conf',
-  }
+  # file { '/etc/logstash/conf.d/puppetserver-access.conf':
+  #   ensure => file,
+  #   source => 'puppet:///modules/test/puppetserver-access.conf',
+  # }
 
-  archive{'/var/tmp/install/tasks.zip':
-    ensure          => present,
-    source          => 'puppet:///modules/test/tasks.zip',
-    extract         => false,
-    checksum        => '1598183de4324c99efde7231031c1151',
-    checksum_type   => 'md5',
-    checksum_verify => false,
-    # extract_path    => 'C:\Strawberry\perl\lib',
-    # creates         => 'C:\Strawberry\perl\lib\Parallel',
-    cleanup         => false,
-  }
+  # archive{'/var/tmp/install/tasks.zip':
+  #   ensure          => present,
+  #   source          => 'puppet:///modules/test/tasks.zip',
+  #   extract         => false,
+  #   checksum        => '1598183de4324c99efde7231031c1151',
+  #   checksum_type   => 'md5',
+  #   checksum_verify => false,
+  #   # extract_path    => 'C:\Strawberry\perl\lib',
+  #   # creates         => 'C:\Strawberry\perl\lib\Parallel',
+  #   cleanup         => false,
+  # }
 }
 
 node 'agent-test.puppetdebug.vlan' {
