@@ -91,18 +91,18 @@ node 'elastic.puppetdebug.vlan' {
 
 node 'replica.puppetdebug.vlan' {
   notify { 'I am the replica': }
-  class { 'java' :
-    package => 'java-1.8.0-openjdk-devel',
-  }
-  include logstash
-  file { '/etc/logstash/conf.d/puppetserver-log.conf':
-    ensure => file,
-    source => 'puppet:///modules/test/puppetserver-log.conf',
-  }
-  file { '/etc/logstash/conf.d/console-services-api-access-log.conf':
-    ensure => file,
-    source => 'puppet:///modules/test/console-services-api-access-log.conf',
-  }
+  # class { 'java' :
+  #   package => 'java-1.8.0-openjdk-devel',
+  # }
+  # include logstash
+  # file { '/etc/logstash/conf.d/puppetserver-log.conf':
+  #   ensure => file,
+  #   source => 'puppet:///modules/test/puppetserver-log.conf',
+  # }
+  # file { '/etc/logstash/conf.d/console-services-api-access-log.conf':
+  #   ensure => file,
+  #   source => 'puppet:///modules/test/console-services-api-access-log.conf',
+  # }
 }
 
 node 'master.puppetdebug.vlan' {
