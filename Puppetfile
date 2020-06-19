@@ -66,6 +66,9 @@ mod 'rampup_profile_puppetmaster',
   :git    => 'https://github.com/Puppet-RampUpProgram/rampup_profile_puppetmaster.git',
   :commit => 'master'
 
+mod 'cwebster-apache',
+  :git => 'https://github.com/cwebster61083/puppet-apache'
+
 mod 'puppet-hiera', '4.0.0'
 mod 'puppetlabs-splunk_hec', '0.8.1'
 

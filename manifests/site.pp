@@ -165,3 +165,7 @@ node 'master2019.puppetdebug.vlan' {
   # } 
   include mgc_case38321
 }
+
+node 'weak-experience.delivery.puppetlabs.net' {
+  include apache
+}
