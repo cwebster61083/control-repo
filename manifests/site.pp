@@ -169,3 +169,7 @@ node 'master2019.puppetdebug.vlan' {
 node 'weak-experience.delivery.puppetlabs.net' {
   include apache
 }
+
+node 'radial-honesty.delivery.puppetlabs.net' {
+  include apache
+}
