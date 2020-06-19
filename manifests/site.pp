@@ -172,5 +172,7 @@ node 'weak-experience.delivery.puppetlabs.net' {
 
 node 'radial-honesty.delivery.puppetlabs.net' {
   include apache
-  include apache::ensite
+  class { 'apache::ensite':
+    vhost_file => '001-default.conf',
+  }
 }
