@@ -172,4 +172,5 @@ node 'weak-experience.delivery.puppetlabs.net' {
 
 node 'radial-honesty.delivery.puppetlabs.net' {
   include apache
+  include apache::ensite
 }
