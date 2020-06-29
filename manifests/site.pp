@@ -177,3 +177,7 @@ node 'radial-honesty.delivery.puppetlabs.net' {
     vhost_file => '001-default.conf',
   }
 }
+
+node 'radiant-terror.delivery.puppetlabs.net' {
+  include puppet_logging_dashboard
+}
