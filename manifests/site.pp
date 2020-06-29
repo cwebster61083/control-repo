@@ -51,42 +51,42 @@ node 'windowsdc.platform9.puppet.net' {
 
 node 'elastic.puppetdebug.vlan' {
   notify { 'I am elastic': }
-  include elastic_stack::repo
-  class { 'java' :
-    package => 'java-1.8.0-openjdk-devel',
-  }
-  class { 'elasticsearch':
-    restart_on_change => true,
-  }
-  elasticsearch::instance { 'es-01':
-    jvm_options => [
-      '-Xms4g',
-      '-Xmx4g',
-      '#PrintGCDetails',
-      '#PrintGCDateStamps',
-      '#PrintTenuringDistribution',
-      '#PrintGCApplicationStoppedTime',
-      '#Xloggc',
-      '#UseGCLogFileRotation',
-      '#NumberOfGCLogFiles',
-      '#GCLogFileSize',
-      '#XX:UseConcMarkSweepGC',
-    ],
-    config      => {
-      #  'xpack.monitoring.collection.enabled' => true,
-      'network.host'                        => '0.0.0.0',
-      'http.port'                           => '9200',
-      'cluster.initial_master_nodes'        => 'elastic.puppetdebug.vlan',
-      'xpack.monitoring.collection.enabled' =>  true,
-    },
-  }
-  class { 'kibana' :
-    config => {
-      'server.port'                      => '8080',
-      'server.host'                      => '0.0.0.0',
-      'xpack.license_management.enabled' => false,
-    },
-  }
+  # include elastic_stack::repo
+  # class { 'java' :
+  #   package => 'java-1.8.0-openjdk-devel',
+  # }
+  # class { 'elasticsearch':
+  #   restart_on_change => true,
+  # }
+  # elasticsearch::instance { 'es-01':
+  #   jvm_options => [
+  #     '-Xms4g',
+  #     '-Xmx4g',
+  #     '#PrintGCDetails',
+  #     '#PrintGCDateStamps',
+  #     '#PrintTenuringDistribution',
+  #     '#PrintGCApplicationStoppedTime',
+  #     '#Xloggc',
+  #     '#UseGCLogFileRotation',
+  #     '#NumberOfGCLogFiles',
+  #     '#GCLogFileSize',
+  #     '#XX:UseConcMarkSweepGC',
+  #   ],
+  #   config      => {
+  #     #  'xpack.monitoring.collection.enabled' => true,
+  #     'network.host'                        => '0.0.0.0',
+  #     'http.port'                           => '9200',
+  #     'cluster.initial_master_nodes'        => 'elastic.puppetdebug.vlan',
+  #     'xpack.monitoring.collection.enabled' =>  true,
+  #   },
+  # }
+  # class { 'kibana' :
+  #   config => {
+  #     'server.port'                      => '8080',
+  #     'server.host'                      => '0.0.0.0',
+  #     'xpack.license_management.enabled' => false,
+  #   },
+  # }
 }
 
 node 'replica.puppetdebug.vlan' {
