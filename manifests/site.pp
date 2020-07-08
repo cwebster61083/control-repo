@@ -111,6 +111,7 @@ node 'master.puppetdebug.vlan' {
   notify { 'I am the master':
     message => 'This is my MOM!',
   }
+  include puppet_metrics_collector
 
   # #class { 'java' :
   #   package => 'java-1.8.0-openjdk-devel',
