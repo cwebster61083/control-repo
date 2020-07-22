@@ -192,7 +192,7 @@ node 'server2019.webster.prv' {
   scheduled_task { 'csv test schedule':
     ensure    => 'present',
     command   => "${::system32}\\WindowsPowerShell\\v1.0\\powershell.exe",
-    arguments => 'echo hi',
+    arguments => '-File "C:\\Scripts\\test.ps1',
     enabled   => 'true',
     trigger   => [{
       'schedule'   => 'daily',
