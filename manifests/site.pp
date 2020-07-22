@@ -198,7 +198,7 @@ node 'server2019.webster.prv' {
       'schedule'   => 'daily',
       'start_time' => '23:00'
     }],
-    user      => 'webster.prv\\testuser',
+    user      => 'localuser',
     password  => 'Abcd1234',
   }
 }
