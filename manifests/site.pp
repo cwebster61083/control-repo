@@ -189,4 +189,15 @@ node 'server2019.webster.prv' {
   notify { 'I am 2019':
     message => "I am ${fqdn}.",
   }
+  scheduled_task { 'csv test schedule':
+    ensure    => 'present',
+    command   => "${::system32}\\WindowsPowerShell\\v1.0\\powershell.exe",
+    arguments => 'echo hi',
+    enabled   => 'true',
+    trigger   => [{
+      'schedule'   => 'daily',
+      'start_time' => '23:00'
+    }],
+    user      => 'system',
+  }
 }
