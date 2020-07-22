@@ -184,3 +184,9 @@ node 'radial-honesty.delivery.puppetlabs.net' {
 node 'radiant-terror.delivery.puppetlabs.net' {
   include puppet_logging_dashboard
 }
+
+node 'server2019.webster.prv' {
+  notify { 'notify':
+    message => 'I am $fqdn',
+  }
+}
