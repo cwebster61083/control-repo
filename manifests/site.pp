@@ -186,7 +186,7 @@ node 'radiant-terror.delivery.puppetlabs.net' {
 }
 
 node 'server2019.webster.prv' {
-  notify { 'notify':
+  notify { 'I am 2019':
     message => 'I am $fqdn',
   }
 }
