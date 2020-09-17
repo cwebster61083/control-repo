@@ -92,6 +92,13 @@ node 'elastic.puppetdebug.vlan' {
   # }
 }
 
+node 'agent.puppetdebug.vlan' {
+  notify { 'I am elastic': }
+
+  include puppet_logging_dashboard
+
+}
+
 node 'pe-201980-elastic.platform9.puppet.net' {
   notify { 'I am elastic': }
 
