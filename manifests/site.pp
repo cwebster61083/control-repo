@@ -53,6 +53,7 @@ node 'elastic.puppetdebug.vlan' {
   notify { 'I am elastic': }
 
   include puppet_logging_dashboard
+
   # include elastic_stack::repo
   # class { 'java' :
   #   package => 'java-1.8.0-openjdk-devel',
