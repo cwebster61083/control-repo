@@ -38,6 +38,9 @@ node 'windows2012.vpn.puppet.net' {
   notify { 'notify':
     message => 'This is the Windows Server 2012 test box.',
   }
+  class {'::puppet_agent':
+    package_version => '6.17.0',
+}
 }
 
 node 'antitrust-aide.delivery.puppetlabs.net' {
