@@ -34,7 +34,7 @@ node 'windows.puppetdebug.vlan' {
   include role::windows
 }
 
-node 'windows2012' {
+node 'windows2012.vpn.puppet.net' {
   notify { 'notify':
     message => 'This is the Windows Server 2012 test box.',
   }
