@@ -34,6 +34,12 @@ node 'windows.puppetdebug.vlan' {
   include role::windows
 }
 
+node 'windows2012' {
+  notify { 'notify':
+    message => 'This is the Windows Server 2012 test box.',
+  }
+}
+
 node 'antitrust-aide.delivery.puppetlabs.net' {
   # file { ''c':\\test.log':
   #   ensure => file,
