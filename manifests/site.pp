@@ -102,9 +102,7 @@ node 'elastic.puppetdebug.vlan' {
 }
 
 node 'agent.puppetdebug.vlan' {
-  notify { 'I am elastic': }
-
-  include puppet_logging_dashboard
+  notify { 'I am the agent.': }
 
 }
 
