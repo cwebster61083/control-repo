@@ -81,3 +81,11 @@ mod 'puppetlabs-cron_core', '1.0.4'
 mod 'puppetlabs-dsc_lite', '3.0.1'
 mod 'puppetlabs-facter_task', '0.7.0'
 mod 'puppetlabs-chocolatey', '5.0.2'
+
+mod 'cohdjn-cisecurity',
+  :git    => 'https://github.com/cohdjn/cisecurity.git',
+  :branch => 'master'
+
+mod 'herculesteam-augeasproviders_grub',
+  :git    => 'https://github.com/cohdjn/augeasproviders_grub.git',
+  :branch => 'master'
