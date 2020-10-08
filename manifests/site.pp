@@ -63,7 +63,7 @@ node 'dashboard.puppetdebug.vlan' {
 
   class { 'puppet_metrics_dashboard':
     add_dashboard_examples => true,
-    overwrite_dashbaords   => false,
+    overwrite_dashboards   => false,
   }
 }
 
