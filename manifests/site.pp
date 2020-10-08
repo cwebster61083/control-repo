@@ -58,6 +58,11 @@ node 'windowsdc.platform9.puppet.net' {
   notify { 'I am windowsdc': }
 }
 
+node 'dashboard.puppetdebug.vlan' {
+  notify {"I am $facts['networking']['hostname']": }
+}
+
+
 node 'elastic.puppetdebug.vlan' {
   notify { 'I am elastic': }
 
