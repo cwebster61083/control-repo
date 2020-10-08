@@ -60,6 +60,11 @@ node 'windowsdc.platform9.puppet.net' {
 
 node 'dashboard.puppetdebug.vlan' {
   notify {"I am $fqdn": }
+
+  class { 'puppet_metrics_dashboard':
+    add_dashboard_examples => true,
+    overwrite_dashbaords   => false,
+  }
 }
 
 
