@@ -64,7 +64,7 @@ node 'dashboard.puppetdebug.vlan' {
   class { 'puppet_metrics_dashboard':
 
  mod 'puppetlabs-puppet_agent', '4.1.1'
-    grafana_version        => '7.2.0'
+    grafana_version        => '7.2.0',
     add_dashboard_examples => true,
     overwrite_dashboards   => false,
     configure_telegraf     => false,
