@@ -64,6 +64,7 @@ node 'dashboard.puppetdebug.vlan' {
   class { 'puppet_metrics_dashboard':
     add_dashboard_examples => true,
     overwrite_dashboards   => false,
+    configure_telegraf     => false,
     enable_telegraf        => false,
   }
 }
