@@ -66,6 +66,7 @@ node 'dashboard.puppetdebug.vlan' {
     overwrite_dashboards   => false,
     configure_telegraf     => false,
     enable_telegraf        => false,
+    influxdb_database_name => ['telegraf', 'graphite', 'puppet_metrics'],
   }
 }
 
