@@ -59,7 +59,7 @@ node 'windowsdc.platform9.puppet.net' {
 }
 
 node 'dashboard.puppetdebug.vlan' {
-  notify {"I am $facts['networking']['hostname']": }
+  notify {"I am $facts['fqdn']": }
 }
 
 
