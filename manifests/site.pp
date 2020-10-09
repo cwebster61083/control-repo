@@ -64,7 +64,7 @@ node 'dashboard.puppetdebug.vlan' {
   class { 'puppet_metrics_dashboard':
     grafana_version        => '7.2.0',
     add_dashboard_examples => true,
-    overwrite_dashboards   => false,
+    overwrite_dashboards   => true,
     configure_telegraf     => false,
     enable_telegraf        => false,
     influxdb_database_name => ['telegraf', 'graphite', 'puppet_metrics'],
