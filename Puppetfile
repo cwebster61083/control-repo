@@ -41,7 +41,7 @@ mod 'puppetlabs-translate', '1.1.0'
 
 mod 'puppetlabs-puppet_metrics_collector', '5.2.0'
 mod 'puppetlabs-puppet_metrics_dashboard',
-  :git    => 'git@github.com:coreymbe/puppet_metrics_dashboard.git',
+  :git    => 'https://github.com/coreymbe/puppet_metrics_dashboard.git',
   :commit => 'ldap-auth'
 mod 'puppet-grafana', '6.1.0'
 mod 'puppet-telegraf', '2.1.0'
@@ -74,8 +74,6 @@ mod 'cwebster-apache',
 
 mod 'puppet-hiera', '4.0.0'
 mod 'puppetlabs-splunk_hec', '0.8.1'
-
-mod 'albatrossflavour-os_patching', '0.13.0'
 mod 'puppet-cron', '2.0.0'
 mod 'puppetlabs-scheduled_task', '2.0.1'
 mod 'puppetlabs-cron_core', '1.0.4'
