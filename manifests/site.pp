@@ -69,6 +69,10 @@ node 'dashboard.puppetdebug.vlan' {
     enable_telegraf        => false,
     influxdb_database_name => ['telegraf', 'graphite', 'puppet_metrics'],
   }
+
+  class { 'puppet_metrics_dashboard::ldap_auth':
+
+  }
 }
 
 
