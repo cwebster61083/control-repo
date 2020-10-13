@@ -71,7 +71,12 @@ node 'dashboard.puppetdebug.vlan' {
   }
 
   class { 'puppet_metrics_dashboard::profile::ldap_auth':
-
+    ldap_host          => 'windowsdc',
+    ldap_bind_dn       => 'cn=queryuser,cn=Users,dc=webster,dc=prv',
+    ldap_bind_password => 'Disast3r!',
+    ldap_search_filter => '(sAMAccountName=%s)',
+    ldap_search_base   => 'dc=webster,dc=prv',
+    ldap_group_dn      => 'CN=PuppetAdmins,OU=Groups,DC=webster,DC=prv',
   }
 }
 
