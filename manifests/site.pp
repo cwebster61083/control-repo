@@ -59,7 +59,7 @@ node 'windowsdc.platform9.puppet.net' {
 }
 
 node 'dashboard.puppetdebug.vlan' {
-  notify {"I am $fqdn": }
+  notify {"I am ${fqdn}": }
 
   class { 'puppet_metrics_dashboard':
     grafana_version        => '7.2.0',
