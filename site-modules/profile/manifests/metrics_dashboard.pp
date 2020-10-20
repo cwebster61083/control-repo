@@ -5,8 +5,6 @@ class profile::metrics_dashboard (
   $puppetserver_hosts = undef,
   $puppetdb_hosts = undef,
   $port = 3000,
-  $grafana_password = '',
-  $influx_db_password = '',
   $data_retention = '336h0m0s', # Two weeks
   $database_names = ['puppet_metrics', 'telegraf'],
 ) {
@@ -38,10 +36,8 @@ class profile::metrics_dashboard (
     manage_repos           => false,
     configure_telegraf     => true,
     grafana_http_port      => $port,
-    grafana_password       => $grafana_password,
     grafana_version        => '7.2.0',
     influxdb_database_name => $database_names,
-    influx_db_password     => $influx_db_password,
     enable_telegraf        => true,
     master_list            => $_puppetserver_hosts.sort,
     puppetdb_list          => $_puppetdb_hosts.sort,
