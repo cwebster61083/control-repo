@@ -1,0 +1,20 @@
+puppet_enterprise::profile::database::shared_buffers: 256MB
+puppet_enterprise::puppetdb::command_processing_threads: 2
+puppet_enterprise::profile::puppetdb::java_args:
+  Xms: 128m
+  Xmx: 128m
+puppet_enterprise::master::puppetserver::jruby_max_active_instances: 1
+puppet_enterprise::profile::master::java_args:
+  Xms: 512m
+  Xmx: 512m
+puppet_enterprise::master::puppetserver::reserved_code_cache: 96m
+puppet_enterprise::profile::console::java_args:
+  Xms: 128m
+  Xmx: 128m
+puppet_enterprise::profile::orchestrator::java_args:
+  Xms: 128m
+  Xmx: 128m
+
+puppet_enterprise::profile::master::r10k_remote: git@github.com:cwebster61083/control-repo.git
+puppet_enterprise::profile::master::r10k_private_key: /vagrant/private/id-control_repo.rsa
+puppet_enterprise::profile::master::code_manager_auto_configure: true
