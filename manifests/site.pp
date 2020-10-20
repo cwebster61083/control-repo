@@ -61,14 +61,15 @@ node 'windowsdc.platform9.puppet.net' {
 node 'dashboard.puppetdebug.vlan' {
   notify {"I am ${fqdn}": }
 
-  class { 'puppet_metrics_dashboard':
-    grafana_version        => '7.2.0',
-    add_dashboard_examples => true,
-    overwrite_dashboards   => false,
-    configure_telegraf     => false,
-    enable_telegraf        => false,
-    influxdb_database_name => ['telegraf', 'graphite', 'puppet_metrics'],
-  }
+  include role::metrics_dashboard
+  # class { 'puppet_metrics_dashboard':
+  #   grafana_version        => '7.2.0',
+  #   add_dashboard_examples => true,
+  #   overwrite_dashboards   => false,
+  #   configure_telegraf     => false,
+  #   enable_telegraf        => false,
+  #   influxdb_database_name => ['telegraf', 'graphite', 'puppet_metrics'],
+  # }
 
   # class { 'puppet_metrics_dashboard::profile::ldap_auth':
   #   ldap_host          => 'windowsdc',
