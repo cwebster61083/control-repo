@@ -1,4 +1,4 @@
-class profiles::puppet_infra_base {
+class profile::puppet_infra_base {
   package { 'toml-rb':
     ensure => 'present',
   }
