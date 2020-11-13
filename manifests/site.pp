@@ -190,7 +190,7 @@ node 'replica.puppetdebug.vlan' {
 
 node 'master.puppetdebug.vlan' {
   notify { 'I am the master':
-    message => 'This is my MOM!',
+    message => 'This is my Primary Puppet Server.',
   }
   include puppet_metrics_collector
 
