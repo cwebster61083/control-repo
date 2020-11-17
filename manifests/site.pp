@@ -126,7 +126,7 @@ node 'elastic.puppetdebug.vlan' {
 }
 
 node 'agent.puppetdebug.vlan' {
-  notify { 'I am the agent.': }
+  notify { 'I am the agent. No realy this is the agent?': }
 
 }
 
