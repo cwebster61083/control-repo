@@ -33,7 +33,7 @@ class profile::metrics_dashboard (
   class { 'puppet_metrics_dashboard':
     add_dashboard_examples => false,
     overwrite_dashboards   => false,
-    manage_repos           => false,
+    manage_repos           => true,
     configure_telegraf     => true,
     grafana_http_port      => $port,
     grafana_version        => '7.2.0',
