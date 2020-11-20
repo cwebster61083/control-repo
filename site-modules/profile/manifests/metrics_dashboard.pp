@@ -1,7 +1,7 @@
 # Creates a metrics server. This server by default listens on port 3000 and can
 # be logged in to using admin/admin
 #
-class profile::metrics_dashboard (
+class profile::metrics_dashboard ( 
   $puppetserver_hosts = undef,
   $puppetdb_hosts = undef,
   $port = 3000,
@@ -31,7 +31,7 @@ class profile::metrics_dashboard (
 
   # Set up the metrics dashboard server
   class { 'puppet_metrics_dashboard':
-    add_dashboard_examples => true,
+    add_dashboard_examples => false,
     overwrite_dashboards   => false,
     manage_repos           => false,
     configure_telegraf     => true,

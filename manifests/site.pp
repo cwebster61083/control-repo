@@ -62,23 +62,6 @@ node 'dashboard.puppetdebug.vlan' {
   notify {"I am ${fqdn}": }
 
   include role::metrics_dashboard
-  # class { 'puppet_metrics_dashboard':
-  #   grafana_version        => '7.2.0',
-  #   add_dashboard_examples => true,
-  #   overwrite_dashboards   => false,
-  #   configure_telegraf     => false,
-  #   enable_telegraf        => false,
-  #   influxdb_database_name => ['telegraf', 'graphite', 'puppet_metrics'],
-  # }
-
-  # class { 'puppet_metrics_dashboard::profile::ldap_auth':
-  #   ldap_host          => 'windowsdc',
-  #   ldap_bind_dn       => 'cn=queryuser,cn=Users,dc=webster,dc=prv',
-  #   ldap_bind_password => '',
-  #   ldap_search_filter => '(sAMAccountName=%s)',
-  #   ldap_search_base   => 'dc=webster,dc=prv',
-  #   ldap_group_dn      => 'CN=PuppetAdmins,OU=Groups,DC=webster,DC=prv',
-  # }
 }
 
 
