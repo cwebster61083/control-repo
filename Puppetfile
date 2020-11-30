@@ -91,6 +91,6 @@ mod 'herculesteam-augeasproviders_grub',
   :branch => 'master'
 
 # Puppet comply module
-mod 'puppetlabs-comply', '1.0.0'
+mod 'puppetlabs-comply', '0.9.0'
 
 mod 'puppetlabs-ruby_task_helper', '0.5.1'
