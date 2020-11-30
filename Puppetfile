@@ -89,3 +89,8 @@ mod 'cohdjn-cisecurity',
 mod 'herculesteam-augeasproviders_grub',
   :git    => 'git@github.com:cohdjn/augeasproviders_grub.git',
   :branch => 'master'
+
+# Puppet comply module
+mod 'puppetlabs-comply', '1.0.0'
+
+mod 'puppetlabs-ruby_task_helper', '0.5.1'
