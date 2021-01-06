@@ -94,3 +94,4 @@ mod 'herculesteam-augeasproviders_grub',
 mod 'puppetlabs-comply', '0.9.0'
 
 mod 'puppetlabs-ruby_task_helper', '0.5.1'
+mod 'puppetlabs-pe_databases', '1.1.0'
