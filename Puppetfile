@@ -40,9 +40,9 @@ mod 'puppetlabs-apt', '7.0.1'
 mod 'puppetlabs-translate', '1.1.0'
 
 mod 'puppetlabs-puppet_metrics_collector', '5.2.0'
-mod 'puppetlabs-puppet_metrics_dashboard',
-  :git    => 'https://github.com/coreymbe/puppet_metrics_dashboard.git',
-  :commit => 'ldap-auth'
+# mod 'puppetlabs-puppet_metrics_dashboard',
+#   :git    => 'https://github.com/coreymbe/puppet_metrics_dashboard.git',
+#   :commit => 'ldap-auth'
 mod 'puppet-grafana', '6.1.0'
 mod 'puppet-telegraf', '2.1.0'
 
@@ -95,3 +95,17 @@ mod 'puppetlabs-comply', '0.9.0'
 
 mod 'puppetlabs-ruby_task_helper', '0.5.1'
 mod 'puppetlabs-pe_databases', '1.1.0'
+
+# RSAN
+mod 'puppetlabs-puppet_metrics_dashboard', '2.4.0'
+
+mod 'puppetlabs-puppetserver_gem', '1.1.1'
+mod 'martyewings-rsan',
+  :git => 'https://github.com/MartyEwings/RSAN.git',
+  :branch => 'main'
+mod 'derdanne-nfs', '2.1.6'
+# mod 'puppetlabs-stdlib', '6.5.0'
+# mod 'puppetlabs-concat', '6.4.0'
+mod 'puppetlabs-postgresql', '6.8.0'
+# mod 'puppetlabs-apt', '7.7.0'
+# mod 'puppet-archive', '4.6.0'
