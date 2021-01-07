@@ -105,7 +105,7 @@ mod 'puppetlabs-puppetserver_gem', '1.1.1'
 #   :branch => 'main'
 mod 'martyewings-rsan',
   :git => 'https://github.com/jarretlavallee/RSAN.git',
-  :branch => 'fix_function_name'
+  :branch => 'gh_30'
 mod 'derdanne-nfs', '2.1.6'
 # mod 'puppetlabs-stdlib', '6.5.0'
 # mod 'puppetlabs-concat', '6.4.0'
