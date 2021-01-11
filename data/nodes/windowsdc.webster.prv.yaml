@@ -1,2 +1,2 @@
 ---
-puppet_enterprise::profile::agent::pxp_enabled: false
+puppet_enterprise::profile::agent::pxp_enabled: true
