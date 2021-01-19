@@ -32,7 +32,7 @@ class profile::metrics_dashboard (
   # Set up the metrics dashboard server
   class { 'puppet_metrics_dashboard':
     add_dashboard_examples => true,
-    overwrite_dashboards   => false,
+    overwrite_dashboards   => true,
     manage_repos           => true,
     configure_telegraf     => false,
     enable_telegraf        => false,
