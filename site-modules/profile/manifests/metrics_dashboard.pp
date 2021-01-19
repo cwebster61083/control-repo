@@ -6,7 +6,7 @@ class profile::metrics_dashboard (
   $puppetdb_hosts = undef,
   $port = 3000,
   $data_retention = '336h0m0s', # Two weeks
-  $database_names = ['puppet_metrics', 'telegraf'],
+  $database_names = ['puppet_metrics'],
 ) {
   # If we haven't passed in the puppetserver hosts we need to work it out
   # ourselves from PuppetDB
@@ -31,14 +31,14 @@ class profile::metrics_dashboard (
 
   # Set up the metrics dashboard server
   class { 'puppet_metrics_dashboard':
-    add_dashboard_examples => false,
+    add_dashboard_examples => true,
     overwrite_dashboards   => false,
     manage_repos           => true,
-    configure_telegraf     => true,
+    configure_telegraf     => false,
+    enable_telegraf        => false,
     grafana_http_port      => $port,
     grafana_version        => '7.2.0',
     influxdb_database_name => $database_names,
-    enable_telegraf        => true,
     master_list            => $_puppetserver_hosts.sort,
     puppetdb_list          => $_puppetdb_hosts.sort,
   }
