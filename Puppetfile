@@ -39,7 +39,7 @@ mod 'puppetlabs-docker', '3.3.0'
 mod 'puppetlabs-apt', '7.0.1'
 mod 'puppetlabs-translate', '1.1.0'
 
-mod 'puppetlabs-puppet_metrics_collector', '5.2.0'
+mod 'puppetlabs-puppet_metrics_collector', :latest
 # mod 'puppetlabs-puppet_metrics_dashboard',
 #   :git    => 'https://github.com/coreymbe/puppet_metrics_dashboard.git',
 #   :commit => 'ldap-auth'
