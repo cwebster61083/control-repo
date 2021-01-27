@@ -56,6 +56,8 @@ node 'antitrust-aide.delivery.puppetlabs.net' {
 
 node 'windowsdc.platform9.puppet.net' {
   notify { 'I am windowsdc': }
+
+  include chocolatey
 }
 
 node 'dashboard.puppetdebug.vlan' {
