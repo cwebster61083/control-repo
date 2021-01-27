@@ -3,6 +3,8 @@ class profile::base (
   $message = ''
 ) {
 
-  notify {"This is the base profile! I am ${facts['networking']['hostname']}":}
+  notify { 'Default Base Profile Message':
+    message => "This is the base profile! I have a message for you: ${message}",
+  }
 
 }
