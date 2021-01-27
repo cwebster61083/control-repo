@@ -62,11 +62,6 @@ node 'windowsdc.webster.prv' {
     ensure   => installed,
     provider => 'chocolatey',
   }
-
-  package { 'notepadplusplus':
-    ensure   => installed,
-    provider => 'chocolatey',
-  }
 }
 
 node 'dashboard.puppetdebug.vlan' {
