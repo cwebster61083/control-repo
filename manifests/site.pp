@@ -59,7 +59,13 @@ node 'windowsdc.webster.prv' {
 
   include chocolatey
   package { 'git':
-    ensure   => latest,
+    ensure   => installed,
+    provider => 'chocolatey',
+  }
+
+  package { 'notepadplusplus':
+    ensure   => installed,
+    provider => 'chocolatey',
   }
 }
 
