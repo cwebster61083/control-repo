@@ -58,6 +58,9 @@ node 'windowsdc.webster.prv' {
   notify { 'I am windowsdc': }
 
   include chocolatey
+  package { 'git':
+    ensure   => latest,
+  }
 }
 
 node 'dashboard.puppetdebug.vlan' {
