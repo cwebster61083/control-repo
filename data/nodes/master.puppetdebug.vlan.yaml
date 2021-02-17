@@ -1,5 +1,7 @@
 puppet_enterprise::profile::database::shared_buffers: 2048MB
 puppet_enterprise::puppetdb::command_processing_threads: 8
+puppet_enterprise::puppetdb::write_maximum_pool_size: 16
+puppet_enterprise::puppetdb::read_maximum_pool_size: 32
 puppet_enterprise::profile::puppetdb::java_args:
   Xms: 512m
   Xmx: 512m
