@@ -26,4 +26,4 @@ puppet_enterprise::master::puppetserver::jruby_puppet_max_queued_requests: 48
 puppet_enterprise::master::puppetserver::jruby_puppet_max_retry_delay: 3600
 pe_repo::enable_windows_bulk_pluginsync: true
 puppet_enterprise::profile::console::rbac_account_expiry_days: 1
-puppet_enterprise::profile::database: 500
+puppet_enterprise::profile::database: 600
