@@ -1,0 +1,5 @@
+puppet_enterprise::puppetserver_ram_per_jruby: 512MB
+
+puppet_enterprise::profile::master::r10k_remote: git@github.com:cwebster61083/control-repo.git
+puppet_enterprise::profile::master::r10k_private_key: /vagrant/private/id-control_repo.rsa
+puppet_enterprise::profile::master::code_manager_auto_configure: true
