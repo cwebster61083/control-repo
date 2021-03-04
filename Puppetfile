@@ -29,15 +29,16 @@ mod 'puppetlabs-bolt_shim', '0.3.0'
 mod 'puppetlabs-apply_helpers', '0.1.0'
 
 mod 'puppet-nginx', :latest
-mod 'puppetlabs-cd4pe', :latest
+mod 'puppetlabs-cd4pe', '2.0.1'
 # Requirements for cd4pe
-mod 'puppetlabs-concat', '4.2.1'
-mod 'puppetlabs-hocon', '1.0.1'
-mod 'puppetlabs-puppet_authorization', '0.5.0'
-mod 'puppetlabs-stdlib', '5.1.0'
-mod 'puppetlabs-docker', '3.3.0'
-mod 'puppetlabs-apt', '7.0.1'
-mod 'puppetlabs-translate', '1.1.0'
+mod 'puppetlabs-concat', '6.4.0'
+mod 'puppetlabs-hocon', '1.1.0'
+mod 'puppetlabs-puppet_authorization', '0.5.1'
+mod 'puppetlabs-stdlib', '6.6.0'
+mod 'puppetlabs-docker', '3.13.1'
+mod 'puppetlabs-apt', '7.7.1'
+mod 'puppetlabs-translate', '2.2.0'
+mod 'puppetlabs-cd4pe_jobs', '1.5.0'
 
 mod 'puppetlabs-puppet_metrics_collector', :latest
 # mod 'puppetlabs-puppet_metrics_dashboard',
