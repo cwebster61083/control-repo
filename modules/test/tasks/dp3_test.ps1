@@ -1,6 +1,6 @@
 [CmdletBinding()]
 Param(
-  [String]$noop,
+  [bool]$noop,
   [String]$tags
 )
 #$error.clear()
