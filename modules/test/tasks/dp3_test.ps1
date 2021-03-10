@@ -3,7 +3,7 @@ Param (
   [String]$noop,
   [String]$tags
 )
-$error.clear()
+#$error.clear()
 $ErrorActionPreference = "Stop"
 $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 $PAgentConfigArg = @()
