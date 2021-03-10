@@ -2,7 +2,7 @@
   "description": "To perform a tagged puppet run",
   "puppet_task_version": "1",
   "supports_noop": false,
-  "input_method": "environment",
+  "input_method": "powershell",
   "parameters": {
     "noop": {
       "description": "For running puppet in noop or not",
