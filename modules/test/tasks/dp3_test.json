@@ -6,7 +6,7 @@
   "parameters": {
     "noop": {
       "description": "For running puppet in noop or not",
-      "type": "String"
+      "type": "String[1]"
     },
     "tags": {
       "description": "To list modules the puppet should run against",
