@@ -35,7 +35,7 @@ write-output "post tag command" $pagentconfigarg
 $PuppetArguments = $PAgentConfigArg -join ' '
 Write-Output "**** Install Arguments : $PuppetArguments"
 Write-Output "**** executing command, please wait…"
-$pcmdstatus = (Start-Process -FilePath "f:\Program Files\Puppet Labs\Puppet\bin\puppet.bat" -ArgumentList $PuppetArguments -Wait -Passthru).ExitCode
+$pcmdstatus = (Start-Process -FilePath "C:\Program Files\Puppet Labs\Puppet\bin\puppet.bat" -ArgumentList $PuppetArguments -Wait -Passthru).ExitCode
 If ($pcmdstatus -eq 0)
 { write-output "success" }
 else
