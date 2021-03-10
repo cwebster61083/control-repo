@@ -1,6 +1,6 @@
 [CmdletBinding()]
 Param (
-  [bool]$noop,
+  [String]$noop,
   [String]$tags
 )
 $error.clear()
@@ -12,10 +12,10 @@ $PAgentConfigArg += "-t"
 
 write-output "bool info for noop" $noop.gettype().fullname
 
-write-output $noop
-write-output $tags
+write-output "Noop = $noop"
+write-output "Tags = $tags"
 
-write-output $paagentconfigarg
+write-output "Config = $paagentconfigarg"
 
 if ($noop) {
   write-output "value indicates true and should be adding noop"
