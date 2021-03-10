@@ -15,7 +15,7 @@ write-output "bool info for noop" $noop.gettype().fullname
 write-output "Noop = $noop"
 write-output "Tags = $tags"
 
-write-output "Config = $paagentconfigarg"
+write-output "Config = $pagentconfigarg"
 
 if ($noop) {
   write-output "value indicates true and should be adding noop"
