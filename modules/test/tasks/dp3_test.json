@@ -1,6 +1,30 @@
 {
-  "supports_noop": true,
-  "description": "test harness",
-  "parameters": {},
-  "input_method": "powershell"
+  "description": "To perform a tagged puppet run",
+  "puppet_task_version": "1",
+  "supports_noop": false,
+  "input_method": "environment",
+  "parameters": {
+    "noop": {
+      "description": "For running puppet in noop or not",
+      "type": "Boolean"
+    },
+    "tags": {
+      "description": "To list modules the puppet should run against",
+      "type": "String[1]"
+    }
+  },
+  "implementations": [
+    {
+      "name": "init.sh",
+      "requirements": [
+        "shell"
+      ]
+    },
+    {
+      "name": "dp3_test.ps1",
+      "requirements": [
+        "powershell"
+      ]
+    }
+  ]
 }

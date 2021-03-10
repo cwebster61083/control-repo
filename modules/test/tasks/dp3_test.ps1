@@ -1,11 +1,42 @@
 [CmdletBinding()]
-Param(
-  # Mandatory is set to false. If Set to $True then a dialog box appears to get the missing information
-  # We will do a variable check later
-  # https://blogs.technet.microsoft.com/heyscriptingguy/2011/05/22/use-powershell-to-make-mandatory-           parameters/
-  [Parameter(Mandatory = $False)]
-  [String]$_installdir,
-  [Boolean]$_noop = $false
+Param (
+  [bool]$noop,
+  [String]$tags
 )
+$error.clear()
+$ErrorActionPreference = "Stop"
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+$PAgentConfigArg = @()
+$PAgentConfigArg += "agent"
+$PAgentConfigArg += "-t"
 
-Exit 0
+write-output "bool info for noop" $noop.gettype().fullname
+
+write-output $noop
+write-output $tags
+
+write-output $paagentconfigarg
+
+if ($noop) {
+  write-output "value indicates true and should be adding noop"
+  $PAgentConfigArg += '--noop'
+}
+else {}
+
+write-output "post noop check" $pagentconfigarg
+
+if ($tags -ne "") {
+  $PAgentConfigArg += "--tags $tags"
+}
+else {}
+
+write-output "post tag command" $pagentconfigarg
+
+$PuppetArguments = $PAgentConfigArg -join ' '
+Write-Output "**** Install Arguments : $PuppetArguments"
+Write-Output "**** executing command, please wait…"
+$pcmdstatus = (Start-Process -FilePath "f:\Program Files\Puppet Labs\Puppet\bin\puppet.bat" -ArgumentList $PuppetArguments -Wait -Passthru).ExitCode
+If ($pcmdstatus -eq 0)
+{ write-output "success" }
+else
+{ write-output "Failed miserably" }
