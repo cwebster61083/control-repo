@@ -1,5 +1,5 @@
 [CmdletBinding()]
-Param (
+Param(
   [String]$noop,
   [String]$tags
 )
