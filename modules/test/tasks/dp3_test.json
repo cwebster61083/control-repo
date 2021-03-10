@@ -15,12 +15,6 @@
   },
   "implementations": [
     {
-      "name": "init.sh",
-      "requirements": [
-        "shell"
-      ]
-    },
-    {
       "name": "dp3_test.ps1",
       "requirements": [
         "powershell"
