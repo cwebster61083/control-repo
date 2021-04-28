@@ -117,6 +117,8 @@ node 'elastic.puppetdebug.vlan' {
 node 'agent.puppetdebug.vlan' {
   notify { 'I am the agent.': }
 
+  include profile::base
+
 }
 
 node 'pe-201980-elastic.platform9.puppet.net' {
