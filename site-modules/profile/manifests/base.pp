@@ -19,9 +19,9 @@ class profile::base {
   # make sure we haven't started the puppet daemon ever
   # this may cause the report on an agent that triggers this via a daemonized run to not be submitted
 
-  service { 'puppet':
-    ensure  => stopped,
-    enable  => false,
-    require => Cron['cron.puppet'],
-    }
+  # service { 'puppet':
+  #   ensure  => stopped,
+  #   enable  => false,
+  #   require => Cron['cron.puppet'],
+  #   }
 }
