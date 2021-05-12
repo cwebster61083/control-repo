@@ -32,6 +32,8 @@ node default {
 
 node 'windows.puppetdebug.vlan' {
   include role::windows
+  include profile::base
+
 }
 
 node 'windows2012.vpn.puppet.net' {
