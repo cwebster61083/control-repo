@@ -77,12 +77,15 @@ mod 'cwebster-apache',
 mod 'puppet-hiera', '4.0.0'
 mod 'puppetlabs-splunk_hec', '0.8.1'
 mod 'puppet-cron', '2.0.0'
-mod 'puppetlabs-scheduled_task', '2.0.1'
+mod 'puppetlabs-scheduled_task', '3.0.0'
 mod 'puppetlabs-cron_core', '1.0.4'
 # mod 'puppetlabs-dsc', '1.9.4'
 mod 'puppetlabs-dsc_lite', '3.0.1'
 mod 'puppetlabs-facter_task', '0.7.0'
 mod 'puppetlabs-chocolatey', '5.0.2'
+
+mod 'reidmv-puppet_run_scheduler', '1.0.1'
+mod 'puppetlabs-acl', '4.0.0'
 
 mod 'cohdjn-cisecurity',
   :git    => 'git@github.com:cohdjn/augeasproviders_grub.git',
