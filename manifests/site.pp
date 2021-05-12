@@ -31,13 +31,11 @@ node default {
 }
 
 node 'windows.puppetdebug.vlan' {
-  include role::windows
   include profile::base
 
 }
 
 node 'windows.platform9.puppet.net' {
-  include role::windows
   include profile::base
 
 }
