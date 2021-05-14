@@ -227,18 +227,6 @@ node 'master.puppetdebug.vlan' {
   # }
 }
 
-node 'compiler1.puppetdebug.vlan' {
-  @@host { "${::facts['hostname']}-bk":
-      ensure => 'present',
-      ip     => $::facts['networking']['interfaces']['eth0']['ip'],
-      name   => "${::facts['hostname']}-bk",
-      tag    => ['backup'],
-  }
-
-  notify { "${::facts['hostname']}-bk":}
-
-  notify { $::facts['networking']['interfaces']['eth0']['ip']:}
-}
 
 node 'agent-test.puppetdebug.vlan' {
   notify { 'I am the agent-test': }
