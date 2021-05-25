@@ -27,4 +27,4 @@ puppet_enterprise::master::puppetserver::jruby_puppet_max_retry_delay: 3600
 pe_repo::enable_windows_bulk_pluginsync: true
 puppet_enterprise::profile::database::max_connections: 500
 puppet_enterprise::puppetdb::database_ini::resource_events_ttl: '1d'
-puppet_enterprise::puppetdb::database_ini::reports_ttl: '1d'
+puppet_enterprise::puppetdb::database_ini::report_ttl: '1d'
