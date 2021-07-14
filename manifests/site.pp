@@ -30,7 +30,7 @@ node default {
   #   class { 'my_class': }
 }
 
-node 'windows.puppetdebug.vlan' {
+node 'test-vm-webster.support.puppetlabs.net' {
   include profile::base
 
   dsc_storagedsc { 'testing dsc stuff':
