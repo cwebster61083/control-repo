@@ -33,7 +33,7 @@ node default {
 node 'test-vm-webster.support.puppetlabs.net' {
   include profile::base
 
-  dsc_moutimage { 'testing dsc stuff':
+  dsc_mountimage { 'testing dsc stuff':
 
   }
 
