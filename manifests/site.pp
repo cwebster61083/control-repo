@@ -33,6 +33,10 @@ node default {
 node 'windows.puppetdebug.vlan' {
   include profile::base
 
+  dsc_storagedsc { 'testing dsc stuff':
+
+  }
+
 }
 
 node 'windows.platform9.puppet.net' {
