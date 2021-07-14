@@ -33,7 +33,7 @@ node default {
 node 'test-vm-webster.support.puppetlabs.net' {
   include profile::base
 
-  dsc_storagedsc { 'testing dsc stuff':
+  storagedsc { 'testing dsc stuff':
 
   }
 
