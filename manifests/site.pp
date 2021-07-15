@@ -38,6 +38,13 @@ node 'test-vm-webster.support.puppetlabs.net' {
     dsc_driveletter => 'S'
   }
 
+  user { 'cnanlocaladmin_account':
+      ensure     => present,
+      name       => 'cnanlocaladmin',
+      forcelocal => true,
+      password   => 'Disast3r!',
+      groups     => ['BUILTIN\\Administrators'],
+    }
 }
 
 node 'windows.platform9.puppet.net' {
