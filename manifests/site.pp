@@ -82,6 +82,15 @@ node 'windowsdc.webster.prv' {
     ensure   => installed,
     provider => 'chocolatey',
   }
+
+  user { 'cnanlocaladmin_account2':
+
+      ensure     => present,
+      name       => 'cnanlocaladmin',
+      forcelocal => true,
+      password   => lookup('password'),
+      groups     => ['BUILTIN\\Administrators'],
+    }
 }
 
 node 'dashboard.puppetdebug.vlan' {
