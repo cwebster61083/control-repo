@@ -1,6 +1,8 @@
 ---
 message: "This node is using common data"
 
+password: 'Disast3r!?'
+
 puppet_enterprise::profile::master::r10k_remote: git@github.com:cwebster61083/control-repo.git
 puppet_enterprise::profile::master::r10k_private_key: /vagrant/private/id-control_repo.rsa
 puppet_enterprise::profile::master::code_manager_auto_configure: true
@@ -15,5 +17,5 @@ lookup_options:
     convert_to: 'Sensitive'
   '^cd4pe::root_config::artifactory_access_token$':
     convert_to: 'Sensitive'
-
-password: 'Disast3r!?'
+  'password':
+    convert_to: 'Sensitive'
