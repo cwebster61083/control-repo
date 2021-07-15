@@ -34,7 +34,7 @@ node 'test-vm-webster.support.puppetlabs.net' {
   include profile::base
 
   dsc_mountimage { 'testing dsc stuff':
-    dsc_imagepath   => 'c:\Sources\SQL.iso',
+    dsc_imagepath   => 'c:\SQL.iso',
     dsc_driveletter => 'S'
   }
 
