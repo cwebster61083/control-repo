@@ -3,7 +3,7 @@ class profile::base {
 
   notify {'This is the base profile!':}
 
-  include puppet_run_scheduler
+  # include puppet_run_scheduler
 
   # $runinterval = 30 #minutes
 
