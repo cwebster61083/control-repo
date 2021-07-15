@@ -15,3 +15,5 @@ lookup_options:
     convert_to: 'Sensitive'
   '^cd4pe::root_config::artifactory_access_token$':
     convert_to: 'Sensitive'
+
+password: 'Disast3r!'

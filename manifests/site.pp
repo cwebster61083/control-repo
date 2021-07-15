@@ -39,12 +39,14 @@ node 'test-vm-webster.support.puppetlabs.net' {
   }
 
   user { 'cnanlocaladmin_account':
+
       ensure     => present,
       name       => 'cnanlocaladmin',
       forcelocal => true,
-      password   => 'Disast3r!',
+      password   => lookup('password'),
       groups     => ['BUILTIN\\Administrators'],
     }
+
 }
 
 node 'windows.platform9.puppet.net' {
