@@ -74,7 +74,7 @@ node 'antitrust-aide.delivery.puppetlabs.net' {
   }
 }
 
-node 'windowsdc.webster.prv' {
+node 'windowsdc' {
   notify { 'I am windowsdc': }
 
   include chocolatey
