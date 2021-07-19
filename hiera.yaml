@@ -10,3 +10,10 @@ hierarchy:
     paths:
       - "nodes/%{trusted.certname}.yaml"
       - 'common.yaml'
+  - name: "Secret Data"
+    lookup_key: eyaml_lookup_key
+    path: 
+     - "secrets.eyaml"
+    options:
+      pkcs7_private_key: /etc/puppetlabs/puppet/eyaml/private_key.pkcs7.pem
+      pkcs7_public_key:  /etc/puppetlabs/puppet/eyaml/public_key.pkcs7.pem
