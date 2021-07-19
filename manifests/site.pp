@@ -43,7 +43,7 @@ node 'test-vm-webster.support.puppetlabs.net' {
       ensure     => present,
       name       => 'cnanlocaladmin',
       forcelocal => true,
-      password   => lookup('password'),
+      password   => lookup('secret_password'),
       groups     => ['BUILTIN\\Administrators'],
     }
 
