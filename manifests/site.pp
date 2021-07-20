@@ -33,6 +33,23 @@ node default {
 node 'test-vm-webster.support.puppetlabs.net' {
   include profile::base
 
+  $iis_features = ['Web-Server','Web-Scripting-Tools']
+  iis_feature { $iis_features:
+    ensure => present,
+  } ->
+
+  iis_site { 'test_website':
+    ensure           => 'present',
+    applicationpool  => 'DefaultAppPool',
+    physicalpath     => 'C:\inetpub\wwwroot\test_website',
+    require          => File['test_website_directory'],
+  }
+
+  file { 'test_website_directory':
+    ensure  => directory,
+    path   => 'C:\inetpub\wwwroot\test_website',
+  }
+
   dsc_mountimage { 'testing dsc stuff':
     dsc_imagepath   => 'c:\SQL.iso',
     dsc_driveletter => 'S'
@@ -43,7 +60,7 @@ node 'test-vm-webster.support.puppetlabs.net' {
       ensure     => present,
       name       => 'cnanlocaladmin',
       forcelocal => true,
-      password   => lookup(secret_password),
+      password   => lookup('secret_password'),
       groups     => ['BUILTIN\\Administrators'],
     }
 
