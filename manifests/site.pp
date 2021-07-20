@@ -50,9 +50,9 @@ node 'test-vm-webster.support.puppetlabs.net' {
     path   => 'C:\inetpub\wwwroot\test_website',
   }
 
-  dsc_mountimage { 'testing dsc stuff':
-    dsc_imagepath   => 'c:\SQL.iso',
-    dsc_driveletter => 'S'
+  dsc_opticaldiskdriveletter{'MoveOpticalDriveTo_O':
+      dsc_diskid      => '1',
+      dsc_driveletter => 'O',
   }
 
   user { 'cnanlocaladmin_account':
