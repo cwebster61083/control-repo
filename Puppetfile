@@ -119,3 +119,5 @@ mod 'puppetlabs-postgresql', '6.8.0'
 # mod 'puppet-archive', '4.6.0'
 
 mod 'dsc-storagedsc', '5.0.1-0-4'
+
+mod 'puppetlabs-iis', '8.0.3'
