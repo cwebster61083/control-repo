@@ -35,7 +35,7 @@ node 'test-vm-webster.support.puppetlabs.net' {
 
   dsc_opticaldiskdriveletter{'MoveOpticalDriveTo_O':
       dsc_diskid      => '1',
-      dsc_driveletter => 'O',
+      dsc_driveletter => "$mappinghash[get($lun,'scsilogicalunit')]",
   }
 
   user { 'cnanlocaladmin_account':
