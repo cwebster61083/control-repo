@@ -211,10 +211,6 @@ node 'replica.puppetdebug.vlan' {
 node 'replicated.puppetdebug.vlan' {
   notify { "I am ${fqdn}.": }
 
-  resources { 'firewall':
-    purge => true,
-  }
-
   Firewall {
     before => Class['profile::firewall_pre'],
     require => Class['profile::firewall_post']
