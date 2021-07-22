@@ -211,18 +211,33 @@ node 'replica.puppetdebug.vlan' {
 node 'replicated.puppetdebug.vlan' {
   notify { "I am ${fqdn}.": }
 
-  # class { 'java' :
-  #   package => 'java-1.8.0-openjdk-devel',
-  # }
-  # include logstash
-  # file { '/etc/logstash/conf.d/puppetserver-log.conf':
-  #   ensure => file,
-  #   source => 'puppet:///modules/test/puppetserver-log.conf',
-  # }
-  # file { '/etc/logstash/conf.d/console-services-api-access-log.conf':
-  #   ensure => file,
-  #   source => 'puppet:///modules/test/console-services-api-access-log.conf',
-  # }
+  class my_fw::pre {
+    Firewall {
+      require => undef,
+    }
+
+    # Default firewall rules
+    firewall { '000 accept all icmp':
+      proto  => 'icmp',
+      action => 'accept',
+    }
+    -> firewall { '001 accept all to lo interface':
+      proto   => 'all',
+      iniface => 'lo',
+      action  => 'accept',
+    }
+    -> firewall { '002 reject local traffic not on loopback interface':
+      iniface     => '! lo',
+      proto       => 'all',
+      destination => '127.0.0.1/8',
+      action      => 'reject',
+    }
+    -> firewall { '003 accept related established rules':
+      proto  => 'all',
+      state  => ['RELATED', 'ESTABLISHED'],
+      action => 'accept',
+    }
+  }
 }
 
 node 'master.puppetdebug.vlan' {
