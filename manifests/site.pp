@@ -35,7 +35,7 @@ node 'test-vm-webster.support.puppetlabs.net' {
 
   dsc_opticaldiskdriveletter{'MoveOpticalDriveTo_O':
       dsc_diskid      => '1',
-      dsc_driveletter => "${mappinghash[get(}${lun},'scsilogicalunit')]",
+      dsc_driveletter => "$mappinghash[get($lun,'scsilogicalunit')]",
   }
 
   user { 'cnanlocaladmin_account':
@@ -216,14 +216,13 @@ node 'replicated.puppetdebug.vlan' {
   }
 
   Firewall {
-    before  => Class['profile::firewall_pre'],
+    before => Class['profile::firewall_pre'],
     require => Class['profile::firewall_post']
   }
 
   class { ['profile::firewall_pre', 'profile::firewall_post']: }
 
   class { 'firewall': }
-
 }
 
 node 'master.puppetdebug.vlan' {
