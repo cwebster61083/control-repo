@@ -2,7 +2,6 @@
 #
 #
 class profile::firewall_pre {
-  # resources
   Firewall {
     require => undef,
   }
@@ -28,4 +27,5 @@ class profile::firewall_pre {
     state  => ['RELATED', 'ESTABLISHED'],
     action => 'accept',
   }
+}
 }
