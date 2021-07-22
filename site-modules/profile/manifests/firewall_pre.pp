@@ -2,6 +2,7 @@
 #
 #
 class profile::firewall_pre {
+
   Firewall {
     require => undef,
   }
