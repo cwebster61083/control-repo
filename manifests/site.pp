@@ -210,7 +210,7 @@ node 'replica.puppetdebug.vlan' {
 
 node 'replicated.puppetdebug.vlan' {
   notify { "I am ${fqdn}.": }
-
+  class { 'firewall': }
   include profile::firewall_pre
 }
 
