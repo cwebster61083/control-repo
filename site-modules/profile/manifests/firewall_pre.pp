@@ -28,4 +28,3 @@ class profile::firewall_pre {
     action => 'accept',
   }
 }
-}
