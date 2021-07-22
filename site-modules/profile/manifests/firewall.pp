@@ -11,7 +11,7 @@ class profile::firewall (
     require => Class['profile::firewall_pre'],
   }
 
-  class { ['::profile::platform::baseline::linux::firewall_pre', '::profile::platform::baseline::linux::firewall_post']: }
+  class { ['::profile::firewall_pre', '::profile::firewall_post']: }
 
   resources { 'firewall':
   purge => $purge,
