@@ -121,3 +121,5 @@ mod 'puppetlabs-postgresql', '6.8.0'
 # mod 'dsc-storagedsc', '5.0.1-0-4'
 
 mod 'puppetlabs-iis', '8.0.3'
+
+mod 'puppetlabs-firewall', '3.0.2'
