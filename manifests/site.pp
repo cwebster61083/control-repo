@@ -218,7 +218,6 @@ node 'replicated.puppetdebug.vlan' {
 
   class { ['profile::firewall_pre', 'profile::firewall_post']: }
 
-  class { 'firewall': }
 }
 
 node 'master.puppetdebug.vlan' {
