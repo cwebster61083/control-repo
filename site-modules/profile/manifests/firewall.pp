@@ -14,7 +14,8 @@ class profile::firewall (
   class { ['::profile::firewall_pre', '::profile::firewall_post']: }
 
   resources { 'firewall':
-  purge => $purge,
+    purge          => $purge,
+    ignore_foreign => true,
   }
 
   include ::firewall
