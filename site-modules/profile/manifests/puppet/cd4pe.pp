@@ -1,6 +1,6 @@
 # CD4PE Profile
 
-class profile::cd4pe {
+class profile::puppet::cd4pe {
 
   # $fqdn                   = lookup('cd4pe::fqdn')
   # $cert                   = $fqdn
@@ -16,8 +16,8 @@ class profile::cd4pe {
   # $cd4pe_xms              = lookup('cd4pe::xms')
 
   # include ::profile::firewall::web_server
-  include ::profile::main
-  include ::profile::kubernetes
+  include ::profile::firewall::main
+  include ::profile::firewall::kubernetes
 
   # if $facts['selinux'] == true {
   #   class { '::selinux':

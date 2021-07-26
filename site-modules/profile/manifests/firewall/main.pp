@@ -1,12 +1,12 @@
 # Base iptables config and logrotation
-class profile::main (
+class profile::firewall::main (
   $purge_iptables = true,
   $docker_swarm = false,
 ){
 
   include ::firewall
-  include ::profile::pre
-  include ::profile::post
+  include ::profile::firewall::pre
+  include ::profile::firewall::post
 
   # $chains     = ['PREROUTING', 'FORWARD', 'INPUT', 'OUTPUT', 'POSTROUTING']
   $chains     = ['PREROUTING', 'INPUT', 'OUTPUT', 'POSTROUTING']

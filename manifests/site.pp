@@ -211,7 +211,7 @@ node 'replica.puppetdebug.vlan' {
 node 'replicated.puppetdebug.vlan' {
   notify { "I am ${fqdn}.": }
 
-  include ::profile::cd4pe
+  include ::profile::puppet::cd4pe
 
 }
 
