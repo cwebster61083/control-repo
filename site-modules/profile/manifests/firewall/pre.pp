@@ -25,5 +25,9 @@ class profile::firewall::pre {
     state  => ['RELATED', 'ESTABLISHED'],
     action => 'accept',
   }
-
+  -> firewall { '005 Allow inbound SSH':
+    dport  => 22,
+    proto  => 'tcp',
+    action => 'accept',
+  }
 }
