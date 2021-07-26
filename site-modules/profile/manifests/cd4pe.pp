@@ -1,6 +1,6 @@
 # CD4PE Profile
 
-class profile::puppet::cd4pe {
+class profile::cd4pe {
 
   # $fqdn                   = lookup('cd4pe::fqdn')
   # $cert                   = $fqdn

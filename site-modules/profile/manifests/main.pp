@@ -1,5 +1,5 @@
 # Base iptables config and logrotation
-class profile::firewall::main (
+class profile::main (
   $purge_iptables = true,
   $docker_swarm = false,
 ){

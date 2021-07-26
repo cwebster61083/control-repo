@@ -1,5 +1,5 @@
 # Ending rules for iptables
-class profile::firewall::post {
+class profile::post {
 
   firewall { '899 drop broadcast':
     action   => 'drop',

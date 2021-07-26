@@ -1,6 +1,6 @@
 # Kubernetes Firewall
 
-class profile::firewall::kubernetes {
+class profile::kubernetes {
 
   firewallchain { [
     'CNI-HOSTPORT-MASQ:nat:IPv4',

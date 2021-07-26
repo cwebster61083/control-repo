@@ -1,5 +1,5 @@
 #Beginning of all iptables rules
-class profile::firewall::pre {
+class profile::pre {
 
   Firewall {
     require => undef,
