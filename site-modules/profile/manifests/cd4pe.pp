@@ -16,8 +16,8 @@ class profile::cd4pe {
   # $cd4pe_xms              = lookup('cd4pe::xms')
 
   # include ::profile::firewall::web_server
-  include ::profile::firewall::main
-  include ::profile::firewall::kubernetes
+  include ::profile::main
+  include ::profile::kubernetes
 
   # if $facts['selinux'] == true {
   #   class { '::selinux':
