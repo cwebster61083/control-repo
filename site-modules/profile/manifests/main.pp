@@ -5,8 +5,8 @@ class profile::main (
 ){
 
   include ::firewall
-  include ::profile::firewall::pre
-  include ::profile::firewall::post
+  include ::profile::pre
+  include ::profile::post
 
   # $chains     = ['PREROUTING', 'FORWARD', 'INPUT', 'OUTPUT', 'POSTROUTING']
   $chains     = ['PREROUTING', 'INPUT', 'OUTPUT', 'POSTROUTING']
