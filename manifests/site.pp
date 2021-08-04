@@ -216,11 +216,13 @@ node 'replicated.puppetdebug.vlan' {
 
 }
 
-node 'master.puppetdebug.vlan' {
-  notify { 'I am the master':
+node 'primary.puppetdebug.vlan' {
+  notify { "I am ${fqdn}.":
     message => 'This is my Primary Puppet Server.',
   }
+
   include puppet_metrics_collector
+  include puppet_metrics_collector::system
 
   # #class { 'java' :
   #   package => 'java-1.8.0-openjdk-devel',
