@@ -96,7 +96,14 @@ node 'windowsdc' {
 node 'dashboard.puppetdebug.vlan' {
   notify {"I am ${fqdn}": }
 
-  include role::metrics_dashboard
+  # include role::metrics_dashboard
+  class{'puppet_metrics_dashboard':
+      add_dashboard_examples => true,
+      overwrite_dashboards   => false,
+      configure_telegraf     => false,
+      enable_telegraf        => false,
+      influxdb_database_name => ['puppet_metrics']
+    }
 }
 
 
