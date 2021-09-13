@@ -200,7 +200,7 @@ node 'pe-201980-elastic.platform9.puppet.net' {
 }
 
 node 'replica.puppetdebug.vlan' {
-  notify { 'I am the replica': }
+  notify { 'I am the replica change': }
   # class { 'java' :
   #   package => 'java-1.8.0-openjdk-devel',
   # }
