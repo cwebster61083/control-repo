@@ -5,6 +5,10 @@ class profile::base {
 
   include puppet_run_scheduler
 
+    cron { 'cron.puppet':
+    ensure  => 'absent'
+  }
+
   # $runinterval = 30 #minutes
 
   # $first_run = fqdn_rand($runinterval)
