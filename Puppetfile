@@ -84,7 +84,7 @@ mod 'puppetlabs-dsc_lite', '3.0.1'
 mod 'puppetlabs-facter_task', '0.7.0'
 mod 'puppetlabs-chocolatey', '5.0.2'
 
-mod 'reidmv-puppet_run_scheduler', '1.0.1'
+mod 'reidmv-puppet_run_scheduler', '1.0.2'
 mod 'puppetlabs-acl', '4.0.0'
 
 mod 'cohdjn-cisecurity',
