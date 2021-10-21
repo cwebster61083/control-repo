@@ -16,12 +16,12 @@ class profile::base {
     minute  => [ $first_run, $second_run ],
   }
 
-  make sure we haven't started the puppet daemon ever
-  this may cause the report on an agent that triggers this via a daemonized run to not be submitted
+  # make sure we haven't started the puppet daemon ever
+  # this may cause the report on an agent that triggers this via a daemonized run to not be submitted
 
   service { 'puppet':
     ensure  => stopped,
     enable  => false,
-    require => Cron['cron.puppet'],
+    require => Cron['cron.puppet' ,]
     }
 }
