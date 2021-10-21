@@ -8,6 +8,33 @@ puppet_enterprise::profile::master::r10k_private_key: /vagrant/private/id-contro
 puppet_enterprise::profile::master::code_manager_auto_configure: true
 puppet_run_scheduler::windows::manage_lastrun_acls: true
 
+puppet_enterprise::profile::database::shared_buffers: 2048MB
+puppet_enterprise::puppetdb::command_processing_threads: 8
+puppet_enterprise::puppetdb::write_maximum_pool_size: 16
+puppet_enterprise::puppetdb::read_maximum_pool_size: 24
+puppet_enterprise::profile::puppetdb::java_args:
+  Xms: 512m
+  Xmx: 512m
+  XX:+UseConcMarkSweepGC: ""
+puppet_enterprise::master::puppetserver::jruby_max_active_instances: 2
+puppet_enterprise::profile::master::java_args:
+  Xms: 2048m
+  Xmx: 2048m
+  XX:+HeapDumpOnOutOfMemoryError: ""
+  XX:HeapDumpPath: "=/var/log/puppetlabs/puppetserver/puppetserver.hprof"
+  Djruby.reify.classes: "=true"
+puppet_enterprise::master::puppetserver::reserved_code_cache: 512m
+puppet_enterprise::profile::console::java_args:
+  Xms: 512m
+  Xmx: 512m
+  XX:+UseConcMarkSweepGC: ""
+puppet_enterprise::profile::orchestrator::java_args:
+  Xms: 512m
+  Xmx: 512m
+  XX:+UseConcMarkSweepGC: ""
+puppet_enterprise::master::puppetserver::jruby_puppet_max_queued_requests: 48
+puppet_enterprise::master::puppetserver::jruby_puppet_max_retry_delay: 3600
+
 lookup_options:
   '^cd4pe::db_pass$':
     convert_to: 'Sensitive'
