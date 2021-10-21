@@ -4,9 +4,9 @@ message: "This node is using common data"
 password: 'Disast3r!?'
 
 puppet_enterprise::profile::master::r10k_remote: git@github.com:cwebster61083/control-repo.git
-puppet_enterprise::profile::master::r10k_private_key: /vagrant/private/id-control_repo.rsa
+# puppet_enterprise::profile::master::r10k_private_key: /vagrant/private/id-control_repo.rsa
 puppet_enterprise::profile::master::code_manager_auto_configure: true
-puppet_run_scheduler::windows::manage_lastrun_acls: true
+# puppet_run_scheduler::windows::manage_lastrun_acls: true
 
 puppet_enterprise::profile::database::shared_buffers: 2048MB
 puppet_enterprise::puppetdb::command_processing_threads: 8
