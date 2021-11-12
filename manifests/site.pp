@@ -31,25 +31,6 @@ node default {
   include profile::base
 }
 
-node 'test-vm-webster.support.puppetlabs.net' {
-  include profile::base
-
-  dsc_opticaldiskdriveletter{'MoveOpticalDriveTo_O':
-      dsc_diskid      => '1',
-      dsc_driveletter => "${mappinghash[get(}${lun},'scsilogicalunit')]",
-  }
-
-  user { 'cnanlocaladmin_account':
-
-      ensure     => present,
-      name       => 'cnanlocaladmin',
-      forcelocal => true,
-      password   => lookup('secret_password'),
-      groups     => ['BUILTIN\\Administrators'],
-    }
-
-}
-
 node 'windows.platform9.puppet.net' {
   include profile::base
 
