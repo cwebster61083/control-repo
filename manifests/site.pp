@@ -304,12 +304,12 @@ node 'server2019.webster.prv' {
   }
 }
 
-node 'clw2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
+node 'clw2019hdp-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   include profile::hdp_profile
 }
 
 node 'clwpe2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   class { 'hdp::data_processor':
-       hdp_url =>  'https://clw2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal:9091',
+       hdp_url =>  'https://clw2019hdp-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal:9091',
     }
 }
