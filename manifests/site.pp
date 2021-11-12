@@ -304,7 +304,7 @@ node 'server2019.webster.prv' {
   }
 }
 
-node 'clwpe2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
+node 'clw2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   include profile::hdp_profile
 }
 
