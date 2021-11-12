@@ -36,7 +36,7 @@ node 'test-vm-webster.support.puppetlabs.net' {
 
   dsc_opticaldiskdriveletter{'MoveOpticalDriveTo_O':
       dsc_diskid      => '1',
-      dsc_driveletter => "$mappinghash[get($lun,'scsilogicalunit')]",
+      dsc_driveletter => "${mappinghash[get(}${lun},'scsilogicalunit')]",
   }
 
   user { 'cnanlocaladmin_account':
@@ -325,4 +325,10 @@ node 'server2019.webster.prv' {
 
 node 'clwpe2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   include profile::hdp_profile
+}
+
+node 'clwpe2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
+  class { 'hdp::data_processor':
+       hdp_url =>  'https://clw2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal:9091',
+    }
 }
