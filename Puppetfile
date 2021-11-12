@@ -123,3 +123,7 @@ mod 'puppetlabs-postgresql', '6.8.0'
 mod 'puppetlabs-iis', '8.0.3'
 
 mod 'puppetlabs-firewall', '3.0.2'
+
+mod 'puppetlabs-hdp',
+  :git    => 'git@github.com:puppetlabs/puppetlabs-hdp.git',
+  :branch => 'main'
