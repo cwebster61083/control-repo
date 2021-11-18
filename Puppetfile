@@ -127,3 +127,5 @@ mod 'puppetlabs-firewall', '3.0.2'
 mod 'puppetlabs-hdp',
   :git    => 'git@github.com:puppetlabs/puppetlabs-hdp.git',
   :branch => 'main'
+
+  mod 'puppetlabs-ca_extend', '3.0.0'
