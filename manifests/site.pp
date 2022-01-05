@@ -310,6 +310,10 @@ node 'clw2019hdp-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
 
 node 'clwpe2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   class { 'hdp::data_processor':
-       hdp_url =>  'https://clw2019hdp-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal:9091',
+      hdp_url =>  'https://clw2019hdp-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal:9091',
     }
+}
+
+node 'win-2019-node-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
+  include bpa_laps
 }
