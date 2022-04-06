@@ -1,7 +1,7 @@
 #Defualt profile
 class profile::base {
 
-  notify {'This is the base profile!':}
+  # notify {'This is the base profile!':}
 
   include puppet_run_scheduler
 
