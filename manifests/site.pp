@@ -319,7 +319,8 @@ node 'win-2019-node-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' 
 }
 
 node 'clwpe-lts-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
+  include puppet_metrics_dashboard::profile::master::install
   class { 'pe_status_check':
     indicator_exclusions             => ['S0001', 'S0022'],
-}
+  }
 }
