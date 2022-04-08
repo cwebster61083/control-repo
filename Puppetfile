@@ -40,7 +40,6 @@ mod 'puppetlabs-hocon', '1.1.0'
 mod 'puppetlabs-puppet_authorization', '0.5.1'
 mod 'puppetlabs-stdlib', '8.1.0'
 mod 'puppetlabs-docker', '4.1.2'
-mod 'puppetlabs-apt', '7.7.1'
 mod 'puppetlabs-translate', '2.2.0'
 mod 'puppetlabs-cd4pe_jobs', '1.5.0'
 
