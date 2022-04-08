@@ -41,7 +41,7 @@ mod 'puppetlabs-apt', '7.7.1'
 mod 'puppetlabs-translate', '2.2.0'
 mod 'puppetlabs-cd4pe_jobs', '1.5.0'
 
-mod 'puppetlabs-puppet_metrics_collector', :latest
+# mod 'puppetlabs-puppet_metrics_collector', :latest
 # mod 'puppetlabs-puppet_metrics_dashboard',
 #   :git    => 'https://github.com/coreymbe/puppet_metrics_dashboard.git',
 #   :commit => 'ldap-auth'
@@ -102,7 +102,7 @@ mod 'puppetlabs-ruby_task_helper', '0.5.1'
 mod 'puppetlabs-pe_databases', '1.1.0'
 
 # RSAN
-mod 'puppetlabs-puppet_metrics_dashboard', '2.5.0'
+# mod 'puppetlabs-puppet_metrics_dashboard', '2.5.0'
 
 mod 'puppetlabs-puppetserver_gem', '1.1.1'
 # mod 'martyewings-rsan',
