@@ -337,3 +337,10 @@ node 'clwpe-lts-b5fe62-2.us-west1-a.c.customer-support-scratchpad.internal' {
 node 'clwpe-lts-b5fe62-3.us-west1-c.c.customer-support-scratchpad.internal' {
   include puppet_metrics_dashboard::profile::master::install
 }
+
+node 'clwpe-lts-b5fe62-5.us-west1-a.c.customer-support-scratchpad.internal' {
+  class { 'puppet_metrics_dashboard':
+    add_dashboard_examples => true,
+    overwrite_dashboards   => false,
+  }
+}
