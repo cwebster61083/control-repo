@@ -25,6 +25,8 @@ mod 'puppetlabs-pwshlib', '0.7.3'
 mod 'puppetlabs-powershell', '3.0.1'
 mod 'nekototori-winrmssl', '2.0.0'
 mod 'puppetlabs-reboot', '4.0.2'
+mod 'puppetlabs-puppet_metrics_dashboard', '2.7.0'
+
 # Requirements for Bolt PE
 mod 'puppetlabs-bolt_shim', '0.3.0'
 mod 'puppetlabs-apply_helpers', '0.1.0'
@@ -41,10 +43,6 @@ mod 'puppetlabs-apt', '7.7.1'
 mod 'puppetlabs-translate', '2.2.0'
 mod 'puppetlabs-cd4pe_jobs', '1.5.0'
 
-# mod 'puppetlabs-puppet_metrics_collector', :latest
-# mod 'puppetlabs-puppet_metrics_dashboard',
-#   :git    => 'https://github.com/coreymbe/puppet_metrics_dashboard.git',
-#   :commit => 'ldap-auth'
 mod 'puppet-grafana', '6.1.0'
 mod 'puppet-telegraf', '2.1.0'
 
@@ -59,9 +57,9 @@ mod 'puppetlabs-java', '6.0.0'
 mod 'puppet-archive', '4.4.0'
 mod 'puppetlabs-facts', '1.0.0'
 
-mod 'puppet_logging_dashboard',
-  :git    => 'git@github.com:cwebster61083/puppet_logging_dashboard.git',
-  :commit => 'Refactor'
+# mod 'puppet_logging_dashboard',
+#   :git    => 'git@github.com:cwebster61083/puppet_logging_dashboard.git',
+#   :commit => 'Refactor'
 
 mod 'puppetlabs-support_tasks', '1.1.2'
 
@@ -100,9 +98,6 @@ mod 'puppetlabs-comply', '0.9.0'
 
 mod 'puppetlabs-ruby_task_helper', '0.5.1'
 mod 'puppetlabs-pe_databases', '1.1.0'
-
-# RSAN
-# mod 'puppetlabs-puppet_metrics_dashboard', '2.5.0'
 
 mod 'puppetlabs-puppetserver_gem', '1.1.1'
 # mod 'martyewings-rsan',
