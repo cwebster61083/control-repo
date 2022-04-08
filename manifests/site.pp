@@ -324,3 +324,11 @@ node 'clwpe-lts-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
     indicator_exclusions             => ['S0001', 'S0022'],
   }
 }
+
+node 'clwpe-lts-b5fe62-1.us-west1-b.c.customer-support-scratchpad.internal' {
+  include puppet_metrics_dashboard::profile::master::install
+}
+
+node 'clwpe-lts-b5fe62-2.us-west1-a.c.customer-support-scratchpad.internal' {
+  include puppet_metrics_dashboard::profile::master::install
+}
