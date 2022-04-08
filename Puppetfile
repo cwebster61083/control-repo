@@ -45,7 +45,7 @@ mod 'puppetlabs-translate', '2.2.0'
 mod 'puppetlabs-cd4pe_jobs', '1.5.0'
 
 mod 'puppet-grafana', '6.1.0'
-mod 'puppet-telegraf', '2.1.0'
+mod 'puppet-telegraf', '4.1.0'
 
 mod 'puppet-yum', '4.0.0'
 mod 'puppetlabs-yumrepo_core', '1.0.4'
