@@ -129,3 +129,5 @@ mod 'puppetlabs-hdp',
   :branch => 'main'
 
   # mod 'puppetlabs-ca_extend', '3.0.0'
+
+mod 'puppetlabs-pe_status_check', '1.3.0'
