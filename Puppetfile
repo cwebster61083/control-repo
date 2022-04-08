@@ -26,6 +26,7 @@ mod 'puppetlabs-powershell', '3.0.1'
 mod 'nekototori-winrmssl', '2.0.0'
 mod 'puppetlabs-reboot', '4.0.2'
 mod 'puppetlabs-puppet_operational_dashboards', '0.2.0'
+mod 'puppetlabs-influxdb', '0.3.0'
 
 # Requirements for Bolt PE
 mod 'puppetlabs-bolt_shim', '0.3.0'
