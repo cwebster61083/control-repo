@@ -317,3 +317,9 @@ node 'clwpe2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
 node 'win-2019-node-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   include bpa_laps
 }
+
+node 'clwpe-lts-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
+  class { 'pe_status_check':
+    indicator_exclusions             => [],
+}
+}
