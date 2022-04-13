@@ -25,7 +25,10 @@ mod 'puppetlabs-pwshlib', '0.7.3'
 mod 'puppetlabs-powershell', '3.0.1'
 mod 'nekototori-winrmssl', '2.0.0'
 mod 'puppetlabs-reboot', '4.0.2'
-mod 'puppetlabs-puppet_operational_dashboards', '0.2.0'
+mod 'puppetlabs-puppet_operational_dashboards',
+  :git => 'https://github.com/puppetlabs/puppet_operational_dashboards.git'
+  :branch => 'SUP-3209-telegraf-grant'
+
 mod 'puppetlabs-influxdb', '0.3.0'
 
 # Requirements for Bolt PE
