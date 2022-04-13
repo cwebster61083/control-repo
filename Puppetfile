@@ -27,7 +27,7 @@ mod 'nekototori-winrmssl', '2.0.0'
 mod 'puppetlabs-reboot', '4.0.2'
 mod 'puppetlabs-puppet_operational_dashboards',
   :git => 'https://github.com/puppetlabs/puppet_operational_dashboards.git'
-  :branch => 'SUP-3209-telegraf-grant'
+  :commit => 'SUP-3209-telegraf-grant'
 
 mod 'puppetlabs-influxdb', '0.3.0'
 
