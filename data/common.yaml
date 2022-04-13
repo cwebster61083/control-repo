@@ -6,7 +6,7 @@ puppet_enterprise::enable_system_metrics_collection: true
 puppet_enterprise::profile::master::versioned_deploys: true
 puppet_enterprise::profile::agent::package_inventory_enabled: true
 
-puppet_metrics_dashboard::pg_query_interval: "1m"
+puppet_operational_dashboards::telegraf::agent::collection_interval: "5s"
 # puppet_enterprise::profile::master::r10k_remote: git@github.com:cwebster61083/control-repo.git
 # puppet_enterprise::profile::master::r10k_private_key: /vagrant/private/id-control_repo.rsa
 # puppet_enterprise::profile::master::code_manager_auto_configure: true
