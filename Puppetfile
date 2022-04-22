@@ -51,7 +51,7 @@ mod 'puppet-telegraf', '4.1.0'
 
 mod 'puppet-yum', '4.0.0'
 mod 'puppetlabs-yumrepo_core', '1.0.4'
-# mod 'elastic-elastic_stack', '8.0.0'
+mod 'puppet-elastic_stack', '8.0.0'
 mod 'puppet-elasticsearch', '8.0.2'
 mod 'puppet-kibana', '7.0.0'
 mod 'elastic-logstash', '6.1.5'
