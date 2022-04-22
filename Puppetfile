@@ -56,7 +56,7 @@ mod 'elastic-elasticsearch', '6.4.0'
 mod 'elastic-kibana', '6.3.1'
 mod 'elastic-logstash', '6.1.5'
 mod 'richardc-datacat', '0.6.2'
-mod 'puppetlabs-java', '6.0.0'
+mod 'puppetlabs-java', '8.0.0'
 mod 'puppet-archive', '4.4.0'
 mod 'puppetlabs-facts', '1.0.0'
 
