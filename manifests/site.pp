@@ -322,7 +322,7 @@ node 'clwpe-lts-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   class { 'pe_status_check':
     indicator_exclusions             => ['S0001', 'S0022'],
   }
-  include puppet_operational_dashboards::profile::postgres_access
+  include puppet_operational_dashboards::enterprise_infrastructure
 }
 
 node 'clwpe-lts-b5fe62-1.us-west1-b.c.customer-support-scratchpad.internal' {
