@@ -17,7 +17,7 @@ forge 'https://forge.puppet.com'
 #  :branch => 'docs_experiment'
 
 mod 'puppetlabs-ntp', '8.3.0'
-mod 'puppetlabs-puppet_agent', '4.4.0'
+mod 'puppetlabs-puppet_agent', '4.12.1'
 mod 'puppetlabs-inifile', '5.2.0'
 mod 'puppetlabs-registry', '3.1.0'
 mod 'puppetlabs-windows_puppet_certificates', '0.2.1'
