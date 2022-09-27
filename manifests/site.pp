@@ -318,11 +318,10 @@ node 'win-2019-node-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' 
   include bpa_laps
 }
 
-node 'clwpe-lts-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
+node 'clwpe2021-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   class { 'pe_status_check':
     indicator_exclusions             => ['S0001', 'S0022'],
   }
-  include puppet_operational_dashboards::enterprise_infrastructure
 }
 
 node 'clwpe-lts-b5fe62-1.us-west1-b.c.customer-support-scratchpad.internal' {
@@ -339,6 +338,6 @@ node 'clwpe-lts-b5fe62-5.us-west1-a.c.customer-support-scratchpad.internal' {
 
 }
 
-node 'clwelastic-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
+node 'clwdash-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   include puppet_logging_dashboard
 }
