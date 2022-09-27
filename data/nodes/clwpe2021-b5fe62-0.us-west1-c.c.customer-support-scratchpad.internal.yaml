@@ -1,0 +1,24 @@
+---
+puppet_enterprise::enable_metrics_collection: true
+puppet_enterprise::enable_system_metrics_collection: true
+
+puppet_enterprise::profile::database::shared_buffers: 1563MB
+puppet_enterprise::puppetdb::command_processing_threads: 1
+puppet_enterprise::profile::puppetdb::java_args:
+  Xms: 781m
+  Xmx: 781m
+puppet_enterprise::profile::orchestrator::jruby_max_active_instances: 1
+puppet_enterprise::profile::orchestrator::java_args:
+  Xms: 781m
+  Xmx: 781m
+puppet_enterprise::profile::console::java_args:
+  Xms: 625m
+  Xmx: 625m
+puppet_enterprise::master::puppetserver::jruby_max_active_instances: 1
+puppet_enterprise::profile::master::java_args:
+  Xms: 512m
+  Xmx: 512m
+puppet_enterprise::master::puppetserver::reserved_code_cache: 96m
+puppet_infrastructure_tune::metadata:
+  pe_version: 2021.7.0
+  tune_date: '2022-09-27'
