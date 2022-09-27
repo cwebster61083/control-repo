@@ -25,7 +25,7 @@ mod 'puppetlabs-pwshlib', '0.7.3'
 mod 'puppetlabs-powershell', '3.0.1'
 mod 'nekototori-winrmssl', '2.0.0'
 mod 'puppetlabs-reboot', '4.0.2'
-mod 'puppetlabs-puppet_operational_dashboards', '1.0.0'
+mod 'puppetlabs-puppet_operational_dashboards'
 
 mod 'puppetlabs-influxdb', '0.3.0'
 
