@@ -324,7 +324,7 @@ node 'clwpe2021-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   }
 }
 
-node 'clwpe-lts-b5fe62-1.us-west1-b.c.customer-support-scratchpad.internal' {
+node 'clwdash-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   include puppet_operational_dashboards
 }
 
@@ -338,6 +338,6 @@ node 'clwpe-lts-b5fe62-5.us-west1-a.c.customer-support-scratchpad.internal' {
 
 }
 
-node 'clwdash-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
-  include puppet_logging_dashboard
-}
+# node 'clwdash-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
+#   include puppet_logging_dashboard
+# }
