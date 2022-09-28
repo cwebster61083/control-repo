@@ -342,7 +342,7 @@ node 'clwpe-lts-b5fe62-5.us-west1-a.c.customer-support-scratchpad.internal' {
 #   include puppet_logging_dashboard
 # }
 
-node 'clwelastic*' {
+node 'clwelastic-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   notify { 'I am elastic': }
 
   include puppet_logging_dashboard
