@@ -1,6 +1,7 @@
 ---
 puppet_enterprise::enable_metrics_collection: true
 puppet_enterprise::enable_system_metrics_collection: true
+puppet_enterprise::profile::master::versioned_deploys: true
 
 puppet_enterprise::profile::database::shared_buffers: 1563MB
 puppet_enterprise::puppetdb::command_processing_threads: 1
