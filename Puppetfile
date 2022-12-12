@@ -60,7 +60,7 @@ mod 'puppetlabs-facts', '1.0.0'
 
 mod 'puppet_logging_dashboard',
   :git    => 'git@github.com:cwebster61083/puppet_logging_dashboard.git',
-  :branch => 'Refactor'
+  :commit => 'Refactor'
 
 mod 'puppetlabs-support_tasks', '1.1.2'
 
