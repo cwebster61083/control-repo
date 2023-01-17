@@ -348,3 +348,6 @@ node 'clwelastic-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
   include puppet_logging_dashboard
 }
 
+node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
+   notify {"I am ${fqdn}": }
+}
