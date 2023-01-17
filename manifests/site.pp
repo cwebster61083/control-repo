@@ -353,7 +353,7 @@ node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
 
    dsc_service { 'dummy_service':
     dsc_name        => 'DHCP Client',
-    dsc_startuptype => 'Automatic',
+    dsc_startuptype => 'Manual',
     dsc_state       => 'Stopped',
 } 
 
