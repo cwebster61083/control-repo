@@ -352,10 +352,11 @@ node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
    notify {"I am ${fqdn}": }
 
    dsc_service { 'W3SVC':
-    dsc_name     => 'W3SVC',
-    dsc_startuptype => 'Automatic',
-    dsc_state       => 'Ignore',
-    validation_mode => 'resource',
+    dsc_name            => 'W3SVC',
+    dsc_startuptype     => 'Automatic',
+    dsc_state           => 'Ignore',
+    validation_mode     => 'resource',
+    dsc_builtinaccount  => 'localsystem',
 } 
 
 }
