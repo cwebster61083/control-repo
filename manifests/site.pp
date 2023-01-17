@@ -357,7 +357,7 @@ node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
     dsc_displayname => 'dummy_service',
     dsc_path        => 'C:\temp\dummy.exe',
     dsc_startuptype => 'Automatic',
-    dsc_state       => 'Ignore',
+    dsc_state       => 'Running',
 } 
 
 }
