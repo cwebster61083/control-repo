@@ -351,7 +351,7 @@ node 'clwelastic-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
 node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
    notify {"I am ${fqdn}": }
 
-   dsc_service { 'dummy_service':
+   dsc_service { 'Dhcp':
     name        => 'DHCP Client',
     startuptype => 'Manual',
     state       => 'Stopped',
