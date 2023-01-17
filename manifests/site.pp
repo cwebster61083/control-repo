@@ -352,9 +352,9 @@ node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
    notify {"I am ${fqdn}": }
 
    dsc_service { 'Dhcp':
-    name        => 'DHCP Client',
-    startuptype => 'Manual',
-    state       => 'Stopped',
+    dsc_name        => 'DHCP Client',
+    dsc_startuptype => 'Manual',
+    dsc_state       => 'Stopped',
 } 
 
 }
