@@ -355,6 +355,7 @@ node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
     dsc_name     => 'W3SVC',
     dsc_startuptype => 'Manual',
     dsc_state       => 'Stopped',
+    validation_mode => 'resource',
 } 
 
 }
