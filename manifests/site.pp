@@ -354,7 +354,7 @@ node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
    dsc_service { 'W3SVC':
     dsc_name            => 'W3SVC',
     dsc_startuptype     => 'Automatic',
-    dsc_state           => 'Ignore',
+    dsc_state           => 'Running',
     dsc_builtinaccount  => 'localsystem',
     # validation_mode     => 'resource',
     
