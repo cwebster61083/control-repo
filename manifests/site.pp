@@ -352,12 +352,9 @@ node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
    notify {"I am ${fqdn}": }
 
    dsc_service { 'dummy_service':
-    dsc_ensure      => 'Present',
-    dsc_name        => 'dummy_service',
-    dsc_displayname => 'dummy_service',
-    dsc_path        => 'C:\temp\dummy.exe',
+    dsc_name        => 'DHCP Client',
     dsc_startuptype => 'Automatic',
-    dsc_state       => 'Running',
+    dsc_state       => 'Stopped',
 } 
 
 }
