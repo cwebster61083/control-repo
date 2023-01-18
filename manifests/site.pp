@@ -351,8 +351,8 @@ node 'clwelastic-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
 node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
    notify {"I am ${fqdn}": }
 
-   dsc_service { 'pxp-agent':
-    dsc_name            => 'pxp-agent',
+   dsc_service { 'W3SVC':
+    dsc_name            => 'W3SVC',
     dsc_startuptype     => 'Manual',
     dsc_state           => 'Ignore',
     dsc_builtinaccount  => 'LocalSystem',
