@@ -287,7 +287,7 @@ node 'radiant-terror.delivery.puppetlabs.net' {
 }
 
 node 'server2019.webster.prv' {
-  notify { 'I am 2019':
+  notify { 'test notify':
     message => "I am ${fqdn}.",
   }
   scheduled_task { 'csv test schedule':
