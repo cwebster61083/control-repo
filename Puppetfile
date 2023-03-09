@@ -16,7 +16,7 @@ forge 'https://forge.puppet.com'
 #  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
 #  :branch => 'docs_experiment'
 
-mod 'puppetlabs-ntp', '8.3.0'
+mod 'puppetlabs-ntp', '9.2.1'
 mod 'puppetlabs-puppet_agent', '4.12.1'
 mod 'puppetlabs-inifile', '5.2.0'
 mod 'puppetlabs-registry', '3.1.0'
