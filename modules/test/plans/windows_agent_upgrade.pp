@@ -1,4 +1,4 @@
-plan eh_puppet_agent::windows_agent_upgrade (
+plan test::windows_agent_upgrade (
   TargetSpec $targets,
   String $version,
   String $source = 'https://artifactory.test.lab:8443/artifactory/chocolatey-installers/windows/puppet7'
