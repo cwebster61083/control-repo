@@ -5,8 +5,8 @@ plan test::update_puppet2(
   # $targets.apply_prep
   # $primary_facts = run_task('facts', $targets, '_catch_errors' => true).first
 
-  run_command("Get-Service -DisplayName 'Puppet Agent'", $targets)
-  run_command("Get-Service -DisplayName 'Puppet PXP Agent' -ErrorAction SilentlyContinue | Stop-Service", $targets)
+  run_task ('service', $targets, 'action' => 'stop', 'name' => 'Puppet Agent')
+  # run_command("Get-Service -DisplayName 'Puppet PXP Agent' -ErrorAction SilentlyContinue | Stop-Service", $targets)
 
-  run_task('puppet_agent::install', $targets, 'version' => $version)
+  # run_task('puppet_agent::install', $targets, 'version' => $version)
 }
