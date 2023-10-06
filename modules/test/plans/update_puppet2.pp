@@ -1,6 +1,6 @@
 plan test::update_puppet2(
   TargetSpec $targets,
-  String $version,
+  # String $version,
 ) {
   # $targets.apply_prep
   # $primary_facts = run_task('facts', $targets, '_catch_errors' => true).first
