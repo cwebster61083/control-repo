@@ -1,20 +1,13 @@
 plan test::windows_agent_upgrade (
   TargetSpec $targets,
-  String $version,
-  String $source = 'https://artifactory.test.lab:8443/artifactory/chocolatey-installers/windows/puppet7'
 ) {
-  $full_source = "${source}/puppet-agent-${version}-x64.msi"
-  $target_objects = get_targets($targets)
-  $facts_result = puppetdb_fact($target_objects)
-  $facts_retrieved_nodes = $facts_result.each |$node, $node_facts| {
-    add_facts(get_target($node), $node_facts)
-  }
-  $result = apply($target_objects, _noop => false) {
+  $targets.apply_prep
+  $primary_facts = run_task('facts', $targets, '_catch_errors' => true).first
+
+  $apply_results = apply($targets) {
     class { 'puppet_agent':
-      install_options     => ['RESINSTALLMODE="amus"', 'ADDLOCAL=ALL'],
-      package_version     => $version,
-      wait_for_puppet_run => 900000,
-      windows_source      => $source,
+      package_version => '7.24.0',
+      windows_source  => 'C:\\Users\\user\\Downloads\\puppet-agent-x64.msi',
     }
   }
 }
