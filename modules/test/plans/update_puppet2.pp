@@ -8,7 +8,7 @@ plan test::update_puppet2(
   # run_task ('service', $targets, 'action' => 'stop', 'name' => 'puppet')
   # run_task ('service', $targets, 'action' => 'stop', 'name' => 'pxp-agent')
 
-  run_task('puppet_agent::install', $targets, 'version' => '7.25.0', 'stop_service' => true)
+  run_command()
 
   # run_task ('service', $targets, 'action' => 'start', 'name' => 'puppet')
   # run_task ('service', $targets, 'action' => 'start', 'name' => 'pxp-agent')
