@@ -3,8 +3,6 @@ class profile::base {
 
   # notify {'This is the base profile!':}
 
-  include puppet_run_scheduler
-
   #   cron { 'cron.puppet':
   #   ensure  => 'absent'
   # }
