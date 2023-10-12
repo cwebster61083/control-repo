@@ -1,4 +1,4 @@
-forge 'https://forge.puppet.com'
+
 
 mod 'puppet_agent',
     :git => 'https://github.com/cwebster61083/puppetlabs-puppet_agent.git'
