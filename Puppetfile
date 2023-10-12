@@ -1,5 +1,8 @@
 forge 'https://forge.puppet.com'
 
+mod 'puppet_agent',
+    :git => 'https://github.com/cwebster61083/puppetlabs-puppet_agent.git'
+
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
 #mod 'puppetlabs/inifile',     '2.2.1'
