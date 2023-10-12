@@ -2,7 +2,7 @@ forge 'https://forge.puppet.com'
 
 mod 'puppet_agent',
     :git => 'https://github.com/cwebster61083/puppetlabs-puppet_agent.git'
-    :branch => 'main'
+    :commit => '29201598838dbf99fc63fe9a28a69d303f43f8f7'
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
