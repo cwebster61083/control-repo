@@ -1,2 +1,1 @@
 ---
-puppet_enterprise::profile::puppetdb::node_purge_ttl: 24h
