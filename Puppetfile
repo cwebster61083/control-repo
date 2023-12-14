@@ -1,8 +1,8 @@
 
 
-mod 'puppet_agent',
-    :git    => 'git@github.com:cwebster61083/puppetlabs-puppet_agent.git'
-    # :branch => 'install_windows_task'
+# mod 'puppet_agent',
+#     :git    => 'git@github.com:cwebster61083/puppetlabs-puppet_agent.git'
+#     :branch => 'install_windows_task'
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
