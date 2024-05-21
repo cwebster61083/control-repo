@@ -373,12 +373,12 @@ node 'clw-win2019-b5fe62-0.us-west1-c.c.customer-support-scratchpad.internal' {
 }
 
 node 'clwwin2019-443cd3-0.us-west1-c.c.customer-support-scratchpad.internal' {
-  # dsc { 'newfile'
-  #   resource_name => 'file',
-  #   module        => 'PSDesiredStateConfiguration',
-  #   properties    => {
-  #     ensure => 'present',
-  #     name   => 'C:\\Users\\user\\Documents\\testing\\file.txt'
-  #   }
-  # }
+  dsc { 'newfile':
+    resource_name => 'file',
+    module        => 'PSDesiredStateConfiguration',
+    properties    => {
+      ensure => 'present',
+      name   => 'C:\\Users\\user\\Documents\\testing\\file.txt'
+    },
+  }
 }
