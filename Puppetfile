@@ -20,15 +20,19 @@
 #  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
 #  :branch => 'docs_experiment'
 
+mod 'puppetlabs-dsc_lite', '3.2.0'
+mod 'puppetlabs-pwshlib', '1.1.1'
+mod 'puppetlabs-reboot', '4.3.1'
+
 # mod 'puppetlabs-ntp', '9.2.1'
 # mod 'puppetlabs-puppet_agent', '4.15.1'
 # mod 'puppetlabs-inifile', '5.2.0'
 # mod 'puppetlabs-registry', '3.1.0'
 # mod 'puppetlabs-windows_puppet_certificates', '0.2.1'
-# mod 'puppetlabs-pwshlib', '0.10.3'
+
 # mod 'puppetlabs-powershell', '3.0.1'
 # mod 'nekototori-winrmssl', '2.0.0'
-# mod 'puppetlabs-reboot', '4.0.2'
+
 # mod 'puppetlabs-puppet_operational_dashboards', '1.3.0'
 
 # mod 'puppetlabs-influxdb', '0.3.0'
@@ -80,7 +84,7 @@
 # mod 'puppetlabs-scheduled_task', '3.0.0'
 # mod 'puppetlabs-cron_core', '1.0.4'
 # mod 'puppetlabs-dsc', '1.9.4'
-# mod 'puppetlabs-dsc_lite', '3.0.1'
+
 # mod 'puppetlabs-facter_task', '0.7.0'
 # mod 'puppetlabs-chocolatey', '5.0.2'
 # mod 'dsc-psdscresources', '2.12.0-0-5'
