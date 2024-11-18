@@ -1,0 +1,5 @@
+---
+role::name::complex: 
+  common: 'complex'
+simple:
+  common: 'simple'
