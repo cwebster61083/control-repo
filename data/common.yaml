@@ -1,9 +1,9 @@
 ---
 # message: "This node is using common data"
 role::name::complex: 
-  common: 'complex'
+  common: 'common complex'
 simple:
-  common: 'simple'
+  common: 'common simple'
 
 
 puppet_enterprise::enable_metrics_collection: true
