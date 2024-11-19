@@ -20,9 +20,9 @@
 #  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
 #  :branch => 'docs_experiment'
 
-mod 'puppetlabs-dsc_lite', '3.2.0'
-mod 'puppetlabs-pwshlib', '1.1.1'
-mod 'puppetlabs-reboot', '4.3.1'
+mod "puppetlabs-dsc_lite", "4.0.0"
+mod "puppetlabs-pwshlib", "1.1.1"
+mod "puppetlabs-reboot", "5.0.0"
 
 # mod 'puppetlabs-ntp', '9.2.1'
 # mod 'puppetlabs-puppet_agent', '4.15.1'
