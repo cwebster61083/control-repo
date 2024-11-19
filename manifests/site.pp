@@ -38,6 +38,12 @@ node 'clwwin2019-443cd3-0.us-west1-c.c.customer-support-scratchpad.internal' {
     message => 'This is my Windows 2019 test box.',
     message => "$simple",
   }
+  class test(
+    $simple = lookup('simple', Hash, 'deep'),
+    $complex = lookup('role::name::complex', Hash, 'deep'),
+  ) {
+    notify { "The value is: ${simple}": }
+  }
 }
 
 # node 'windows.platform9.puppet.net' {
