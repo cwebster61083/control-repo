@@ -4,6 +4,7 @@ class profile::base (
   $complex = lookup('role::name::complex', Hash, 'deep'),
 ) {
   notify { "${simple}":}
+   notify { "${complex}":}
 
   #   cron { 'cron.puppet':
   #   ensure  => 'absent'
