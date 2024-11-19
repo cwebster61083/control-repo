@@ -1,7 +1,9 @@
 #Defualt profile
-class profile::base {
-
-  # notify {'This is the base profile!':}
+class profile::base (
+  $simple = lookup('simple', Hash, 'deep'),
+  $complex = lookup('role::name::complex', Hash, 'deep'),
+) {
+  notify {$simple:}
 
   #   cron { 'cron.puppet':
   #   ensure  => 'absent'
