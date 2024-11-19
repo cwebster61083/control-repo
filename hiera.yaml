@@ -10,10 +10,7 @@ hierarchy:
     paths:
       - "nodes/%{trusted.certname}.yaml"
       - 'common.yaml'
-
-  - name: 'private.yaml'
-    path: 'private.yaml'
-
+      - 'private.yaml'
   - name: "Secret Data"
     lookup_key: eyaml_lookup_key
     path: secrets.eyaml
