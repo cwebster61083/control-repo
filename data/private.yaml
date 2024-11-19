@@ -1,5 +1,5 @@
 ---
 role::name::complex: 
-  common: 'private complex'
+  private: 'private complex'
 simple:
-  common: 'private simple'
+  private: 'private simple'
