@@ -3,7 +3,7 @@ Facter.add('win_license_status_esu') do
   setcode do
     ps_command = <<-EOH
     Get-CimInstance SoftwareLicensingProduct -Filter \\"Name like 'Windows%'\\" |
-    Where-Object { $_.PartialProductKey -eq '9W66F'} |
+    Where-Object { $_.PartialProductKey -eq ' 63DFG '} |
     Select-Object -ExpandProperty LicenseStatus
 EOH
 
