@@ -5,22 +5,20 @@ Facter.add('win_license_status_esu') do
     Get-CimInstance SoftwareLicensingProduct -Filter \\"Name like 'Windows%'\\" |
     Where-Object { $_.PartialProductKey -eq ' 63DFG '} |
     Select-Object -ExpandProperty LicenseStatus
-EOH
+    EOH
 
-# Execute the PowerShell command
-result = Facter::Core::Execution.execute("powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"#{ps_command}\"", :timeout => 30)
+    # Execute the PowerShell command
+    result = Facter::Core::Execution.execute("powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"#{ps_command}\"", :timeout => 30)
 
-# Log the raw output for debugging purposes
-Facter.debug("LicenseStatus PowerShell output: #{result.strip}")
+    # Log the raw output for debugging purposes
+    Facter.debug("LicenseStatus PowerShell output: #{result.strip}")
 
-# Return the LicenseStatus as an integer
-win_license_status12 = result.strip.to_i
+    # Return the LicenseStatus as an integer
+    win_license_status12 = result.strip.to_i
 
-# Debug log the interpreted license status
-Facter.debug("Interpreted LicenseStatus: #{license_status}")
+    # Debug log the interpreted license status
+    Facter.debug("Interpreted LicenseStatus: #{license_status}")
 
-win_license_status
+    win_license_status
+  end
 end
-end
-
-I've attached the job rub in debug mode where the given node having the job run against it should have facter resolve the custom fact as well.
