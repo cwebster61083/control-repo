@@ -2,9 +2,10 @@ Facter.add('win_license_status_esu') do
   confine :kernel => 'windows'
   setcode do
     ps_command = <<-EOH
-     Get-CimInstance SoftwareLicensingProduct -Filter "Name like 'Windows%'" |
-     Where-Object { $_.PartialProductKey -eq '63DFG'} |
-     Select-Object -ExpandProperty LicenseStatus 
+     Get-CimInstance SoftwareLicensingProduct -Filter \\"Name like 'Windows%'\\" |
+Where-Object { $_.PartialProductKey -eq '63DFG'} |
+Select-Object -ExpandProperty LicenseStatus 
+
 
     EOH
 
@@ -15,11 +16,11 @@ Facter.add('win_license_status_esu') do
     Facter.debug("LicenseStatus PowerShell output: #{result.strip}")
 
     # Return the LicenseStatus as an integer
-    win_license_status = result.strip.to_i
+    license_status = result.strip.to_i
 
     # Debug log the interpreted license status
     Facter.debug("Interpreted LicenseStatus: #{license_status}")
 
-    win_license_status_esu
+    license_status
   end
 end
