@@ -38,6 +38,13 @@ node 'clwwin2019-443cd3-0.us-west1-c.c.customer-support-scratchpad.internal' {
   include profile::base
 }
 
+node 'clwwin2025-443cd3-0.us-west1-c.c.customer-support-scratchpad.internal' {
+  notify { 'notify':
+    message => 'This is my Windows 2025 test box.',
+  }
+  include profile::base
+}
+
 # node 'windows.platform9.puppet.net' {
 #   include profile::base
 
