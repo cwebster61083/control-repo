@@ -24,6 +24,10 @@ mod "puppetlabs-dsc_lite", "4.0.0"
 mod "puppetlabs-pwshlib", "1.1.1"
 mod "puppetlabs-reboot", "5.0.0"
 
+mod 'testmodule',
+  :git    => 'https://chriswebster0234@dev.azure.com/chriswebster0234/PuppetLab/_git/testmodule',
+  :ref    => 'v5.0'
+
 # mod 'puppetlabs-ntp', '9.2.1'
 # mod 'puppetlabs-puppet_agent', '4.15.1'
 # mod 'puppetlabs-inifile', '5.2.0'
