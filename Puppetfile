@@ -28,6 +28,10 @@ mod 'testmodule',
   :git    => 'https://chriswebster0234@dev.azure.com/chriswebster0234/PuppetLab/_git/testmodule',
   :ref    => 'v5.5'
 
+mod 'testmodule',
+  :git    => 'https://github.com/cwebster61083/testmodule.git',
+  :ref    => 'v5.5'
+
 # mod 'puppetlabs-ntp', '9.2.1'
 # mod 'puppetlabs-puppet_agent', '4.15.1'
 # mod 'puppetlabs-inifile', '5.2.0'
