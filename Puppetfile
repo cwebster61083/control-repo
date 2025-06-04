@@ -25,7 +25,7 @@ mod "puppetlabs-pwshlib", "1.1.1"
 mod "puppetlabs-reboot", "5.0.0"
 
 mod 'testmodule',
-  :git    => 'https://github.com/cwebster61083/testmodule.git',
+  :git    => 'https://chriswebster0234@dev.azure.com/chriswebster0234/PuppetLab/_git/testmodule',
   :ref    => 'v5.5'
 
 # mod 'puppetlabs-ntp', '9.2.1'
